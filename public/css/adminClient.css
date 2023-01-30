@@ -1,0 +1,66 @@
+table.adminAddClientTable tbody tr.adminAddClientTr {
+    border: 1px solid #7746ff;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+    padding-bottom: 2vh;
+}
+
+.adminAddClientImgDiv {
+    width: 25px;
+    height: 25px;
+    background: #d9d9d9;
+    border-radius: 10px;
+}
+
+.adminAddClientViewBtn {
+    background: #7746ff;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    width: 7vw;
+    height: 4.5vh;
+}
+
+.adminAddClientDelBtn {
+    background: #d44141;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    width: 7vw;
+    height: 4.5vh;
+    margin-left: 1vw;
+}
+
+.addminAddClientTxts {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.adminClientPaginationNum {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.adminClientPaginationLeftIcon {
+    margin-left: 1.5vw;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+.adminClientPaginationRightIcon {
+    color: #000000;
+    cursor: pointer;
+}
+
+.adminClientPaginationInnerControlDiv {
+    display: flex;
+}
+
+.adminClientSearchInputMainDiv {
+    display: flex;
+}
+
