@@ -378,7 +378,7 @@
     }
     .proImg {
         width: 100%;
-        height: auto;
+        height: 28vh;
     }
     .proImgBtnContainDiv {
         display: flex;
