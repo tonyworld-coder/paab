@@ -169,3 +169,8 @@ Route::prefix('supre')->middleware(['auth', 'can:run_superAdmin_ops'])->group(fu
         return view('shared.changepassview');
     });
 });
+
+
+Route::get('/setupweb', function () {
+        return view('setupweb');
+    });
