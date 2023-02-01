@@ -247,23 +247,26 @@
         font-size: 12px;
         color: rgba(0, 0, 0, 0.5);
     }
-
     .schQuesP1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 12px;
         color: #1E1E1E;
     }
-
     input.validate.formInput1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 0.9rem;
         height: 1rem;
     }
-
     .input-field.col.formInput1ColDiv {
         margin-top: 0.5vh;
+    }
+
+    /* Internship Section */
+    .radioBtnMainDiv {
+        width: 80%;
+        margin: auto;
     }
 
 
@@ -506,6 +509,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 0.9rem;
+        /* height: 3vh; */
     }
     .spaceAround {
         display: flex;
@@ -531,6 +535,12 @@
     }
     .input-field.col.formInput1ColDiv {
         margin-top: 0.5vh;
+    }
+
+    /* Internship Section */
+    .radioBtnMainDiv {
+        width: 80%;
+        margin: auto;
     }
 
 
