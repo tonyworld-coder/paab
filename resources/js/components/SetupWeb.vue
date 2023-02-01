@@ -83,7 +83,7 @@
                                 <div class="col s1">
                                     <p class="domainSelectP">
                                         <label>
-                                            <input class="with-gap" name="group1" type="radio" />
+                                            <input class="with-gap" name="domainName" type="radio" />
                                             <span></span>
                                         </label>
                                     </p>
@@ -106,7 +106,7 @@
                                 <div class="col s1">
                                     <p class="domainSelectP">
                                         <label>
-                                            <input class="with-gap" name="group1" type="radio" />
+                                            <input class="with-gap" name="domainName" type="radio" />
                                             <span></span>
                                         </label>
                                     </p>
@@ -129,7 +129,7 @@
                                 <div class="col s1">
                                     <p class="domainSelectP">
                                         <label>
-                                            <input class="with-gap" name="group1" type="radio" />
+                                            <input class="with-gap" name="domainName" type="radio" />
                                             <span></span>
                                         </label>
                                     </p>
@@ -152,7 +152,7 @@
                                 <div class="col s1">
                                     <p class="domainSelectP">
                                         <label>
-                                            <input class="with-gap" name="group1" type="radio" />
+                                            <input class="with-gap" name="domainName" type="radio" />
                                             <span></span>
                                         </label>
                                     </p>
