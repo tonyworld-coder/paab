@@ -776,17 +776,106 @@
 
                     <!-- Service Section -->
                     <div v-show="view == 10">
-                        Services
+                        <div v-show="servicesCheck == 0">
+                            <p class="contentTitle">Do you render any services?</p>
+                            
+                            <div class="radioBtnMainDiv">
+                                <p>
+                                    <label @click="servicesSelected()">
+                                        <input class="with-gap" name="intern" type="radio" />
+                                        <span class="radioBtnSpan">Yes</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label @click="servicesNotSelected()">
+                                        <input class="with-gap" name="intern" type="radio" />
+                                        <span class="radioBtnSpan">No</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div v-show="servicesCheck == 1">
+                            <p class="contentTitle">Tell us about your services</p>
+
+                            <form class="mainForm">
+                                <div class="row formContainDiv">
+                                    <div class="input-field col s12">
+                                        <input placeholder="Title" type="text" class="validate formInput">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div v-show="servicesCheck == 2">
+                            <p class="contentTitle">Do you want to add more services?</p>
+                        
+                            <div class="radioBtnMainDiv">
+                                <p>
+                                    <label @click="addMoreServicesSelected()">
+                                        <input class="with-gap" name="intern" type="radio" />
+                                        <span class="radioBtnSpan">Yes</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label @click="addMoreServicesNotSelected()">
+                                        <input class="with-gap" name="intern" type="radio" />
+                                        <span class="radioBtnSpan">No</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publish Section -->
+                    <div v-show="view == 11">
+                        <p class="contentTitle">
+                            <span class="serviceSuccessTxt">Congrats!</span>
+                            Curriculum Vitae completed
+                        </p>
+
+                        <div class="row serviceBtnRowDiv">
+                            <div class="col s5 m4 offset-s1 offset-m2">
+                                <button class="waves-effect waves-light btn goLiveFreeBtn">
+                                    Go live <br> Free
+                                </button>
+
+                                <ul>
+                                    <li>Secured website</li>
+                                    <li>Custom domain name</li>
+                                    <li>Branded email</li>
+                                </ul>
+                            </div>
+                            <div class="col s5 m4 offset-s1 offset-m1">
+                                <button class="waves-effect waves-light btn goLiveProBtn">
+                                    Go live <br> Pro
+                                </button>
+
+                                <ul>
+                                    <li>Secured website</li>
+                                    <li>Custom domain name</li>
+                                    <li>Branded email</li>
+                                    <li>Social media stream</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Prev/Next Button Section -->
                     <div>
                         <div v-if="view > 0 && view <= 3" class="skipDiv">
-                            <button class="skipBtn" @click="prev()" :disabled="view <= 1" :class="view > 1 ? 'btnOn' : 'btnOff'">
+                            <button class="skipBtn" 
+                                @click="prev()" 
+                                :disabled="view <= 1" :class="view > 1 ? 'btnOn' : 'btnOff'"
+                            >
                                 <i class="material-icons">keyboard_arrow_left</i>
                             </button>
-                            <span class="skipTxt">skip</span>
-                            <button class="skipBtn" @click="next()" :disabled="view == view.length" :class="view != 4 ? 'btnOn' : 'btnOff'">
+                                <span class="skipTxt">skip</span>
+                            <button class="skipBtn" 
+                                @click="next()" 
+                                :disabled="view == view.length" 
+                                :class="view != 4 ? 'btnOn' : 'btnOff'"
+                            >
                                 <i class="material-icons">keyboard_arrow_right</i>
                             </button>
                     
@@ -796,26 +885,38 @@
                         </div>
                         <div v-if="view == 4 && academicCheck == 1">
                             <div class="skipDiv">
-                                <button class="skipBtn" @click="prev1()" :disabled="academicCheck == 0"
-                                    :class="attendedSchInfo > 0 ? 'btnOn' : 'btnOff'">
+                                <button class="skipBtn" 
+                                    @click="prev1()" 
+                                    :disabled="academicCheck == 0"
+                                    :class="attendedSchInfo > 0 ? 'btnOn' : 'btnOff'"
+                                >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
-                                <span class="skipTxt">skip</span>
-                                <button class="skipBtn" @click="next1()" :disabled="academicCheck == academicCheck.length"
-                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'">
+                                    <span class="skipTxt">skip</span>
+                                <button class="skipBtn" 
+                                    @click="next1()" 
+                                    :disabled="academicCheck == academicCheck.length"
+                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
+                                >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
                             </div>
                         </div>
                         <div v-if="view == 4 && academicCheck == 2 && attendedMedSch <= 3">
                             <div class="skipDiv">
-                                <button class="skipBtn" @click="prev2()" :disabled="academicCheck == 0"
-                                    :class="attendedMedSch > 0 ? 'btnOn' : 'btnOff'">
+                                <button class="skipBtn" 
+                                    @click="prev2()" 
+                                    :disabled="academicCheck == 0"
+                                    :class="attendedMedSch > 0 ? 'btnOn' : 'btnOff'"
+                                >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
-                                <span class="skipTxt">skip</span>
-                                <button class="skipBtn" @click="next2()" :disabled="academicCheck == academicCheck.length"
-                                    :class="attendedMedSch != 3 ? 'btnOn' : 'btnOff'">
+                                    <span class="skipTxt">skip</span>
+                                <button class="skipBtn" 
+                                    @click="next2()" 
+                                    :disabled="academicCheck == academicCheck.length"
+                                    :class="attendedMedSch != 3 ? 'btnOn' : 'btnOff'"
+                                >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
                             </div>
@@ -840,26 +941,38 @@
                         </div>
                         <div v-if="view == 6">
                             <div class="skipDiv">
-                                <button class="skipBtn" @click="prev4()" :disabled="fellowshipCheck == 0"
-                                    :class="fellowshipCheck > 0 ? 'btnOn' : 'btnOff'">
+                                <button class="skipBtn" 
+                                    @click="prev4()" 
+                                    :disabled="fellowshipCheck == 0"
+                                    :class="fellowshipCheck > 0 ? 'btnOn' : 'btnOff'"
+                                >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
-                                <span class="skipTxt">skip</span>
-                                <button class="skipBtn" @click="next4()" :disabled="fellowshipCheck == 0"
-                                    :class="fellowshipCheck < 1 ? 'btnOff' : 'btnOn'">
+                                    <span class="skipTxt">skip</span>
+                                <button class="skipBtn" 
+                                    @click="next4()" 
+                                    :disabled="fellowshipCheck == 0"
+                                    :class="fellowshipCheck < 1 ? 'btnOff' : 'btnOn'"
+                                >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
                             </div>
                         </div>
                         <div v-if="view == 7">
                             <div class="skipDiv">
-                                <button class="skipBtn" @click="prev5()" :disabled="residencyCheck == 0"
-                                    :class="residencyCheck > 0 ? 'btnOn' : 'btnOff'">
+                                <button class="skipBtn" 
+                                    @click="prev5()" 
+                                    :disabled="residencyCheck == 0"
+                                    :class="residencyCheck > 0 ? 'btnOn' : 'btnOff'"
+                                >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
-                                <span class="skipTxt">skip</span>
-                                <button class="skipBtn" @click="next5()" :disabled="residencyCheck == 0"
-                                    :class="residencyCheck < 1 ? 'btnOff' : 'btnOn'">
+                                    <span class="skipTxt">skip</span>
+                                <button class="skipBtn" 
+                                    @click="next5()" 
+                                    :disabled="residencyCheck == 0"
+                                    :class="residencyCheck < 1 ? 'btnOff' : 'btnOn'"
+                                >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
                             </div>
@@ -885,16 +998,56 @@
                         </div>
                         <div v-if="view == 9">
                             <div class="skipDiv">
-                                <button class="skipBtn" @click="prev7()" 
+                                <button class="skipBtn" 
+                                    @click="prev7()" 
                                     :disabled="addQualificaion == 0"
                                     :class="addQualificaion > 0 ? 'btnOn' : 'btnOff'"
                                 >
-                                        <i class="material-icons">keyboard_arrow_left</i>
+                                    <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
                                     <span class="skipTxt">skip</span>
-                                <button class="skipBtn" @click="next7()" 
+                                <button class="skipBtn" 
+                                    @click="next7()" 
                                     :disabled="addQualificaion > 5"
                                     :class="addQualificaion > 5 ? 'btnOff' : 'btnOn'"
+                                >
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                </button>
+                            </div>
+                        </div>
+                        <div v-if="view == 10">
+                            <div class="skipDiv">
+                                <button class="skipBtn" 
+                                    @click="prev8()" 
+                                    :disabled="servicesCheck == 0"
+                                    :class="servicesCheck > 0 ? 'btnOn' : 'btnOff'"
+                                >
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                </button>
+                                    <span class="skipTxt">skip</span>
+                                <button class="skipBtn" 
+                                    @click="next8()" 
+                                    :disabled="servicesCheck == 0"
+                                    :class="servicesCheck < 1 ? 'btnOff' : 'btnOn'"
+                                >
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                </button>
+                            </div>
+                        </div>
+                        <div v-if="view == 11">
+                            <div class="skipDiv">
+                                <button class="skipBtn" 
+                                    @click="prev9()" 
+                                    :disabled="view == 11"
+                                    :class="view >= 11 ? 'btnOff' : 'btnOn'"
+                                >
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                </button>
+                                    <span class="skipTxt">skip</span>
+                                <button class="skipBtn" 
+                                    @click="next9()" 
+                                    :disabled="view == 11"
+                                    :class="view >= 11 ? 'btnOff' : 'btnOn'"
                                 >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
@@ -926,6 +1079,7 @@ export default {
             residencyCheck: 0,
             experienceCheck: 0,
             addQualificaion: 0,
+            servicesCheck: 0,
         };
     },
     mounted() { },
@@ -1050,7 +1204,30 @@ export default {
         },
         addMoreQualNotSelected() {
             this.view = 10;
-        }
+        },
+        prev8() {
+            this.servicesCheck != 0 ? this.servicesCheck-- : null;
+        },
+        next8() {
+            this.servicesCheck != 3 ? this.servicesCheck++ : null;
+
+            if (this.servicesCheck >= 3) {
+                this.view = 11;
+            }
+        },
+        addMoreServicesSelected() {
+            this.servicesCheck = 1;
+        }, 
+        addMoreServicesNotSelected() {
+            this.view = 11;
+        },
+        servicesSelected() {
+            this.servicesCheck = 1;
+        },
+        servicesNotSelected() {
+            this.view = 11;
+        },
+        
     },
 };
 </script>
