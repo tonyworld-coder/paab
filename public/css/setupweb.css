@@ -294,7 +294,7 @@
         width: 85%;
         margin: 2.5vh auto 0 auto;
     }
-    ul li {
+    ul>li {
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 0.8rem;
@@ -603,7 +603,7 @@
         width: 90%;
         margin: 2.5vh auto 0 auto;
     }
-    ul li {
+    ul>li {
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 0.8rem;
