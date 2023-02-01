@@ -807,7 +807,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div v-if="view == 4 && academicCheck == 2 && attendedMedSch <= 2">
+                        <div v-if="view == 4 && academicCheck == 2 && attendedMedSch <= 3">
                             <div class="skipDiv">
                                 <button class="skipBtn" @click="prev2()" :disabled="academicCheck == 0"
                                     :class="attendedMedSch > 0 ? 'btnOn' : 'btnOff'">
@@ -961,7 +961,7 @@ export default {
         next2() {
             this.attendedMedSch != 3 ? this.attendedMedSch++ : null;
 
-            if (this.attendedMedSch == 2) {
+            if (this.attendedMedSch >= 3) {
                 this.view = 5;
             }
         },
