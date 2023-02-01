@@ -382,8 +382,8 @@
     }
     .proImgBtnContainDiv {
         display: flex;
-        width: 40%;
-        margin: 0vh auto;
+        width: 50%;
+        margin: 2vh auto 0 auto;
     }
     .file-path.validate.proImgInput {
         width: 20%;
