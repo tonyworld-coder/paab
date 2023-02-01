@@ -205,9 +205,25 @@
 
                     <!-- Prev/Next Button Section -->
                     <div v-if="view > 0" class="skipDiv">
-                        <i class="material-icons skipBtnIcon" @click="prev()">keyboard_arrow_left</i>
+                        <button class="skipBtn" 
+                            @click="prev()" 
+                            :disabled="view == 1" 
+                            :class="view > 1 ? 'btnOn' : 'btnOff'"
+                        >
+                            <i class="material-icons">keyboard_arrow_left</i>
+                        </button>
+                            <span class="skipTxt">skip</span>
+                        <button class="skipBtn" 
+                            @click="next()" 
+                            :disabled="view == view.length"
+                            :class="view != 3 ? 'btnOn' : 'btnOff'"
+                        >
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </button>
+
+                        <!-- <i class="material-icons skipBtnIcon" @click="prev()">keyboard_arrow_left</i>
                         <span class="skipTxt">skip</span>
-                        <i class="material-icons skipBtnIcon" @click="next()">keyboard_arrow_right</i>
+                        <i class="material-icons skipBtnIcon" @click="next()">keyboard_arrow_right</i> -->
                     </div>
 
                     <!-- <InnerFooter /> -->
@@ -242,7 +258,15 @@ export default {
 };
 </script>
 <style>
-    .flex {
+.flex {
         display: flex;
+    }
+    .btnOn {
+        border: 2px solid var(--primary);
+        color: var(--primary);
+    }
+    .btnOff {
+        border: 2px solid #D9D9D9;
+        color: #D9D9D9;
     }
 </style>
