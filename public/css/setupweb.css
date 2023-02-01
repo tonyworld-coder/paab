@@ -99,10 +99,14 @@
         position: relative;
         top: 0.5vh;
     }
-    .skipBtnIcon {
+    /* .skipBtnIcon {
         border: 2px solid var(--primary);
         border-radius: 50px;
         color: var(--primary);
+    } */
+    button.skipBtn {
+        padding: 0 0.5vw;
+        border-radius: 50px;
     }
     .unAvailTitle {
         font-family: 'Montserrat', sans-serif;
@@ -319,11 +323,11 @@
         position: relative;
         top: 0.5vh;
     }
-    .skipBtnIcon {
+    /* .skipBtnIcon {
         border: 2px solid var(--primary);
         border-radius: 50px;
         color: var(--primary);
-    }
+    } */
     button.skipBtn {
         padding: 0 0.5vw;
         border-radius: 50px;
