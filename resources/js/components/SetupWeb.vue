@@ -173,8 +173,9 @@
                         </div>
                     </div>
 
+                    <!-- Client Img check section -->
                     <div v-show="view == 3">
-                        <p class="contentTitle">Are you ok with this domain name?</p>
+                        <p class="contentTitle">Are you ok with this picture?</p>
                          
                         <div class="proImgDiv">
                             <img src="/media/img/setupWeb/profilePics.png" alt="profilePics.png" class="proImg">
