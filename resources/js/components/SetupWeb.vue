@@ -364,7 +364,7 @@
                     <!-- Internship Section -->
                     <div v-show="view == 5">
                         <!-- Internship Check -->
-                        <div v-show="academicCheck == 0">
+                        <div v-show="InternshipCheck == 0">
                             <p class="contentTitle">Did you attend internship?</p>
                     
                             <div class="acaMainDiv">
@@ -440,7 +440,7 @@
                                     <button class="skipBtn" 
                                         @click="next2()" 
                                         :disabled="academicCheck == academicCheck.length"
-                                        :class="attendedMedSch != 2 ? 'btnOn' : 'btnOff'"
+                                        :class="attendedMedSch != 3 ? 'btnOn' : 'btnOff'"
                                     >
                                         <i class="material-icons">keyboard_arrow_right</i>
                                     </button>
@@ -464,14 +464,11 @@ export default {
     data() {
         return {
             view: 0,
-            // academic: false,
             academicCheck: 0,
-            // undergrad: 0,
-            // med: 0,
-            // undergradMedSection: false,
-
             attendedSchInfo: 0,
             attendedMedSch: 0,
+
+            InternshipCheck: 0,
         };
     },
     mounted() { },
@@ -486,11 +483,9 @@ export default {
             this.view = 1;
         },
         undergradMedSelected() {
-            // this.academic = true;
             this.academicCheck = 1;
         },
         medSelected() {
-            // this.academic = true;
             this.academicCheck = 2;
         },
         prev1() {
@@ -507,12 +502,18 @@ export default {
             this.attendedMedSch != 0 ? this.attendedMedSch-- : null;
         },
         next2() {
-            this.attendedMedSch != 2 ? this.attendedMedSch++ : null;
+            this.attendedMedSch != 3 ? this.attendedMedSch++ : null;
 
-            // if (this.attendedSchInfo >= 3) {
-            //     this.academicCheck = 2;
-            // }
+            if (this.attendedMedSch >= 3) {
+                this.view = 5;
+            }
         },
+        internSelected() {
+            console.log('Yes');
+        },
+        internNotSelected() {
+            console.log('No');
+        }
     },
 };
 </script>
