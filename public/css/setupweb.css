@@ -107,6 +107,7 @@
     button.skipBtn {
         padding: 0 0.5vw;
         border-radius: 50px;
+        background-color: transparent;
     }
     .unAvailTitle {
         font-family: 'Montserrat', sans-serif;
@@ -331,6 +332,7 @@
     button.skipBtn {
         padding: 0 0.5vw;
         border-radius: 50px;
+        background-color: transparent;
     }
     .unAvailTitle {
         font-family: 'Montserrat', sans-serif;
