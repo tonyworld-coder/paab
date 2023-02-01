@@ -207,7 +207,7 @@
                     <div v-if="view > 0" class="skipDiv">
                         <button class="skipBtn" 
                             @click="prev()" 
-                            :disabled="view == 1" 
+                            :disabled="view <= 1" 
                             :class="view > 1 ? 'btnOn' : 'btnOff'"
                         >
                             <i class="material-icons">keyboard_arrow_left</i>
