@@ -32,7 +32,7 @@
                     <div v-show="view == 1">
                         <p class="contentTitle">Is it okay to address you as follows?</p>
 
-                        <form>
+                        <form class="mainForm">
                             <div class="row formInnerDiv">
                                 <div class="input-field col s2">
                                     <select>
@@ -59,7 +59,7 @@
                     <div v-show="view == 2">
                         <p class="contentTitle">Are you ok with this domain name?</p>
 
-                        <form>
+                        <form class="mainForm">
                             <div class="row formInnerDiv">
                                 <div class="input-field col s8">
                                     <input type="text" value="johndoemed.com" class="validate">
@@ -204,27 +204,226 @@
                         </div>
                     </div>
 
-                    <!-- Prev/Next Button Section -->
-                    <div v-if="view > 0" class="skipDiv">
-                        <button class="skipBtn" 
-                            @click="prev()" 
-                            :disabled="view <= 1" 
-                            :class="view > 1 ? 'btnOn' : 'btnOff'"
-                        >
-                            <i class="material-icons">keyboard_arrow_left</i>
-                        </button>
-                            <span class="skipTxt">skip</span>
-                        <button class="skipBtn" 
-                            @click="next()" 
-                            :disabled="view == view.length"
-                            :class="view != 3 ? 'btnOn' : 'btnOff'"
-                        >
-                            <i class="material-icons">keyboard_arrow_right</i>
-                        </button>
+                    <!-- Acadamic Section -->
+                    <div v-show="view == 4">
+                        <!-- Academic Check -->
+                        <div v-show="academicCheck == 0">
+                            <p class="contentTitle">Which academic path suits you?</p>
+                            
+                            <div class="acaMainDiv">
+                                <p>
+                                    <label @click="undergradMedSelected()">
+                                        <input class="with-gap" name="acadamic" type="radio" />
+                                        <span class="acaRadioBtnSpan">Undergraduate School and Medical School</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label @click="medSelected()">
+                                        <input class="with-gap" name="acadamic" type="radio" />
+                                        <span class="acaRadioBtnSpan">Only Medical School</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        
 
-                        <!-- <i class="material-icons skipBtnIcon" @click="prev()">keyboard_arrow_left</i>
-                        <span class="skipTxt">skip</span>
-                        <i class="material-icons skipBtnIcon" @click="next()">keyboard_arrow_right</i> -->
+                        <!-- Undergrad and Med school -->
+                        <div v-show="academicCheck == 1">
+                            <div>
+                                <p class="contentTitle">Tell us about your time in undergraduate school</p>
+
+                                <div v-if="attendedSchInfo == 0">
+                                    <form class="mainForm" > 
+                                        <div class="row formContainDiv">
+                                            <div class="input-field col s12">
+                                                <input placeholder="What Institution did you attend" type="text" class="validate formInput">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div v-if="attendedSchInfo == 1">
+                                    <form class="mainForm">
+                                        <div class="row formInnerDiv">
+                                            <div class="input-field col s5">
+                                                <input placeholder="What major" type="text" class="validate formInput">
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input placeholder="What minor(optional)" type="text" class="validate formInput">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div v-if="attendedSchInfo == 2">
+                                    <form class="mainForm">
+                                        <div class="row formInnerDiv">
+                                            <div class="col s6">
+                                                <p class="schQuesP">When did you start</p>
+                                                <div class="row spaceAround">
+                                                    <div class="col s3">
+                                                        <p class="schQuesP1">Start</p>
+                                                    </div>
+                                                    <div class="input-field col s4 formInput1ColDiv">
+                                                        <input placeholder="Month" type="text" class="validate formInput1">
+                                                    </div>
+                                                    <div class="input-field col s4 formInput1ColDiv">
+                                                        <input placeholder="Year" type="text" class="validate formInput1">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class=" col s5">
+                                                <p class="schQuesP" >When did you end</p>
+                                                <div class="row spaceAround">
+                                                    <div class="col s2">
+                                                        <p class="schQuesP1">End</p>
+                                                    </div>
+                                                    <div class="input-field col s4 formInput1ColDiv">
+                                                        <input placeholder="Month" type="text" class="validate formInput1">
+                                                    </div>
+                                                    <div class="input-field col s4 formInput1ColDiv">
+                                                        <input placeholder="Year" type="text" class="validate formInput1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+
+                        <!-- Med school -->
+                        <div v-show="academicCheck == 2">
+                            <!-- <div> -->
+                                <p class="contentTitle">Tell us about your time in medical school</p>
+                            
+                                <div>
+                                    <div v-if="attendedMedSch == 0">
+                                        <form class="mainForm">
+                                            <div class="row formContainDiv">
+                                                <div class="input-field col s12">
+                                                    <input placeholder="What Institution did you attend" type="text" class="validate formInput">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                            
+                                    <div v-if="attendedMedSch == 1">
+                                        <form class="mainForm">
+                                            <div class="row formContainDiv">
+                                                <div class="input-field col s12">
+                                                    <input placeholder="What degree" type="text" class="validate formInput">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                            
+                                    <div v-if="attendedMedSch == 2">
+                                        <form class="mainForm">
+                                            <div class="row formInnerDiv">
+                                                <div class="col s6">
+                                                    <p class="schQuesP">When did you start</p>
+                                                    <div class="row spaceAround">
+                                                        <div class="col s3">
+                                                            <p class="schQuesP1">Start</p>
+                                                        </div>
+                                                        <div class="input-field col s4 formInput1ColDiv">
+                                                            <input placeholder="Month" type="text" class="validate formInput1">
+                                                        </div>
+                                                        <div class="input-field col s4 formInput1ColDiv">
+                                                            <input placeholder="Year" type="text" class="validate formInput1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class=" col s5">
+                                                    <p class="schQuesP">When did you end</p>
+                                                    <div class="row spaceAround">
+                                                        <div class="col s2">
+                                                            <p class="schQuesP1">End</p>
+                                                        </div>
+                                                        <div class="input-field col s4 formInput1ColDiv">
+                                                            <input placeholder="Month" type="text" class="validate formInput1">
+                                                        </div>
+                                                        <div class="input-field col s4 formInput1ColDiv">
+                                                            <input placeholder="Year" type="text" class="validate formInput1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+
+                    <!-- Prev/Next Button Section -->
+                    <div>
+                        <div v-if="view > 0 && view <= 3" class="skipDiv">
+                            <button class="skipBtn" 
+                                @click="prev()" 
+                                :disabled="view <= 1" 
+                                :class="view > 1 ? 'btnOn' : 'btnOff'"
+                            >
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </button>
+                                <span class="skipTxt">skip</span>
+                            <button class="skipBtn" 
+                                @click="next()" 
+                                :disabled="view == view.length" 
+                                :class="view != 4 ? 'btnOn' : 'btnOff'"
+                            >
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </button>
+                        
+                            <!-- <i class="material-icons skipBtnIcon" @click="prev()">keyboard_arrow_left</i>
+                            <span class="skipTxt">skip</span>
+                            <i class="material-icons skipBtnIcon" @click="next()">keyboard_arrow_right</i> -->
+                        </div>
+                        <div v-else-if="view == 4 && academicCheck == 1">
+                            <div class="skipDiv">
+                                <button class="skipBtn" 
+                                    @click="prev1()" 
+                                    :disabled="academicCheck == 0"
+                                    :class="attendedSchInfo > 0 ? 'btnOn' : 'btnOff'"
+                                >
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                </button>
+                                    <span class="skipTxt">skip</span>
+                                <button class="skipBtn" 
+                                    @click="next1()"
+                                    :disabled="academicCheck == academicCheck.length"
+                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
+                                >
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                </button>
+                            </div>
+                        </div>
+                        <div v-else-if="academicCheck == 2">
+                            <div class="skipDiv">
+                                <div class="skipDiv">
+                                    <button class="skipBtn" 
+                                        @click="prev2()" 
+                                        :disabled="academicCheck == 0"
+                                        :class="attendedMedSch > 0 ? 'btnOn' : 'btnOff'"
+                                    >
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                    </button>
+                                        <span class="skipTxt">skip</span>
+                                    <button class="skipBtn" 
+                                        @click="next2()" 
+                                        :disabled="academicCheck == academicCheck.length"
+                                        :class="attendedMedSch != 2 ? 'btnOn' : 'btnOff'"
+                                    >
+                                        <i class="material-icons">keyboard_arrow_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- <InnerFooter /> -->
@@ -242,6 +441,14 @@ export default {
     data() {
         return {
             view: 0,
+            // academic: false,
+            academicCheck: 0,
+            // undergrad: 0,
+            // med: 0,
+            // undergradMedSection: false,
+
+            attendedSchInfo: 0,
+            attendedMedSch: 0,
         };
     },
     mounted() { },
@@ -250,11 +457,39 @@ export default {
             this.view != 0 ? this.view-- : null;
         },
         next() {
-            this.view != 3 ? this.view++ : null;
+            this.view != 4 ? this.view++ : null;
         },
         getStarted() {
             this.view = 1;
-        }
+        },
+        undergradMedSelected() {
+            // this.academic = true;
+            this.academicCheck = 1;
+        },
+        medSelected() {
+            // this.academic = true;
+            this.academicCheck = 2;
+        },
+        prev1() {
+            this.attendedSchInfo != 0 ? this.attendedSchInfo-- : null;
+        },
+        next1() {
+            this.attendedSchInfo != 3 ? this.attendedSchInfo++ : null;
+
+            if (this.attendedSchInfo >= 3) {
+                this.academicCheck = 2;
+            }
+        },
+        prev2() {
+            this.attendedMedSch != 0 ? this.attendedMedSch-- : null;
+        },
+        next2() {
+            this.attendedMedSch != 2 ? this.attendedMedSch++ : null;
+
+            // if (this.attendedSchInfo >= 3) {
+            //     this.academicCheck = 2;
+            // }
+        },
     },
 };
 </script>
