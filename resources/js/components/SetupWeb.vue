@@ -214,13 +214,13 @@
                                 <p>
                                     <label @click="undergradMedSelected()">
                                         <input class="with-gap" name="acadamic" type="radio" />
-                                        <span class="acaRadioBtnSpan">Undergraduate School and Medical School</span>
+                                        <span class="radioBtnSpan">Undergraduate School and Medical School</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label @click="medSelected()">
                                         <input class="with-gap" name="acadamic" type="radio" />
-                                        <span class="acaRadioBtnSpan">Only Medical School</span>
+                                        <span class="radioBtnSpan">Only Medical School</span>
                                     </label>
                                 </p>
                             </div>
@@ -358,6 +358,29 @@
                                     </div>
                                 </div>
                             <!-- </div> -->
+                        </div>
+                    </div>
+
+                    <!-- Internship Section -->
+                    <div v-show="view == 5">
+                        <!-- Internship Check -->
+                        <div v-show="academicCheck == 0">
+                            <p class="contentTitle">Did you attend internship?</p>
+                    
+                            <div class="acaMainDiv">
+                                <p>
+                                    <label @click="internSelected()">
+                                        <input class="with-gap" name="intern" type="radio" />
+                                        <span class="radioBtnSpan">Yes</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label @click="internNotSelected()">
+                                        <input class="with-gap" name="intern" type="radio" />
+                                        <span class="radioBtnSpan">No</span>
+                                    </label>
+                                </p>
+                            </div>
                         </div>
                     </div>
 
