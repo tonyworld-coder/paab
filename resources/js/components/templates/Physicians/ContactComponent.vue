@@ -3,11 +3,44 @@
         <div class="row" id="templateContact">
             <div class="col s12" id="testiContactFormTitleDiv">
                 <p class="feedsMainTitle expMainTitle">Contact Me</p>
-                <p class="feedsMainTxt">SCHEDULE AN APPOINTMENT</p>
+                <p class="contactHeaderTxt">SCHEDULE AN APPOINTMENT</p>
                 <h3 class="title">
                     CONTACT ME
                     <span class="primaryColorBoxDesign5"></span>
                 </h3>
+
+                <div class="hide-on-large-only">
+                    <!-- Contact Modal Trigger -->
+                    <a class="modal-trigger contactEditBtn" href="#contactEditModal">
+                        <i class="material-icons editIcon">edit</i>
+                    </a>
+                    
+                    <!-- Contact Modal Structure -->
+                    <div id="contactEditModal" class="modal">
+                        <div class="modal-content">
+                            <div class="aboutWriteUpsEditModalInnerDiv">
+                                <a href="#!" class="modal-close editWriteUpsModalCloseBtn">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                </a>
+                                <form>
+                                    <div class="row rm_mg">
+                                        <div class="input-field col s12 rm_mg">
+                                            <input type="text" value="info@mddrjohndoe.com" class="validate aboutWriteUpsInput">
+                                        </div>
+                                    </div>
+                    
+                                </form>
+                                <p class="servicesInputInstruct">Email you input will be the mail your client will contact you</p>
+                                <div class="editWriteUpsSaveBtnDiv">
+                                    <a href="#" class="editWriteUpsSaveBtn">
+                                        Save
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="contactMainDiv">
                 <div class="col s12 m5 l5 greenBg">

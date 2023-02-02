@@ -78,30 +78,61 @@
             </ul>
         </nav>
 
-        <nav class="headerNoSideNav center-align">
-            <a href="/" class="sideNavBrandLogo">
-                {{user == '' ? 'Dr Chidinma Felix' : user}}
-            </a>
-        </nav>
-        <ul class="extHeaderNoSideNav">
+        <div class="navbar-fixed">
+            <nav class="headerNoSideNav center-align">
+                <!-- Sidenav Trigger -->
+                <a href="#" data-target="slide" class="sidenav-trigger sidenavTriggerLink">
+                    <i class="material-icons sidenavTriggerIcon">settings</i>
+                </a>
+                <a href="/" class="sideNavBrandLogo">
+                    {{user == '' ? 'Dr Chidinma Felix' : user}}
+                </a>
+                <ul class="extHeaderNoSideNav">
+                    <li>
+                        <a href="#about" class="mobileNavLink">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="mobileNavLink">Services</a>
+                    </li>
+                    <!-- <li>
+                            <a href="#experience">Experience</a>
+                        </li> -->
+                    <!-- <li>
+                            <a href="#testimonials">Testimonials</a>
+                        </li> -->
+                    <!-- <li>
+                        <a href="#feeds">Feeds</a>
+                    </li> -->
+                    <li>
+                        <a href="#contact" class="mobileNavLink">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Sidenav Content -->
+        <ul id="slide" class="sidenav">
             <li>
-                <a href="#services">Services</a>
+                <a href="#!" class="sidenav-close sidenavCloseBtn">
+                    <i class="material-icons sidenavCloseIcon white-text">cancel</i>
+                </a>
             </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#testimonials">Testimonials</a>
-            </li>
-            <li>
-                <a href="#feeds">Feeds</a>
-            </li>
-            <li>
-                <a href="#contact">Contact Me</a>
-            </li>
+
+            <li><a href="#!" class="sidenavLink">General</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!" class="sidenavLink">About</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!" class="sidenavLink">Milestones</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!" class="sidenavLink">Public Features</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!" class="sidenavLink">Services</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!" class="sidenavLink">Social Media</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!" class="sidenavLink">CV Generator</a></li>
+            <li><div class="divider"></div></li>
         </ul>
     </div>
-    
 </template>
 <script>
     export default {

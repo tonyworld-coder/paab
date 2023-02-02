@@ -8,11 +8,11 @@
             <AboutMeComponent :tenant="tenant" :title="title" :user="user" :bio="bio" :location="location" :preview="preview"/>
             
             <ServicesComponent :services="services" />
-            <div id="experienceContainer">
+            <!-- <div id="experienceContainer">
                 <ExperienceComponent :tenant="tenant"  :experience="achievement" :location="location" :preview="preview"/>
-            </div>
-            <SocialMediaComponent :socials="socials"/>
-            <TestimonialsComponent :reviews="reviews" :preview="preview" :tenant="tenant"/>
+            </div> -->
+            <!-- <SocialMediaComponent :socials="socials"/> -->
+            <!-- <TestimonialsComponent :reviews="reviews" :preview="preview" :tenant="tenant"/> -->
             <div id="contactContainer">
                 <ContactComponent :preview="preview"/>
             </div>
@@ -21,11 +21,11 @@
 </template>
 <script lang="js">
     import ContactComponent from "./ContactComponent.vue";
-    import ExperienceComponent from "./ExperienceComponent.vue";
+    // import ExperienceComponent from "./ExperienceComponent.vue";
     import HeaderComponent from "./HeaderComponent.vue";
     import ServicesComponent from "./ServicesComponent.vue";
-    import SocialMediaComponent from "./SocialMediaComponent.vue";
-    import TestimonialsComponent from "./TestimonialsComponent.vue";
+    // import SocialMediaComponent from "./SocialMediaComponent.vue";
+    // import TestimonialsComponent from "./TestimonialsComponent.vue";
     import AboutMeComponent from "./AboutMeComponent.vue";
     let bio = '/api/bio';
     let service = '/api/service';
@@ -37,9 +37,9 @@
         components: {
             HeaderComponent,
             ServicesComponent,
-            ExperienceComponent,
-            SocialMediaComponent,
-            TestimonialsComponent,
+            // ExperienceComponent,
+            // SocialMediaComponent,
+            // TestimonialsComponent,
             ContactComponent,
             AboutMeComponent
         },

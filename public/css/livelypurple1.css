@@ -20,10 +20,10 @@ nav {
 .headerNoSideNav, .extHeaderNoSideNav {
     display: none;
 }
-.section {
-    /* padding-top: 1rem !important; */
-    /* padding-bottom: 1rem !important; */
-}
+/* .section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+} */
 /* .navbarWrap {
     width: 90%;
     margin: 0 auto;
@@ -764,6 +764,20 @@ a.physiTempContactBtn.active {
     margin-top: 5vh;
 }
 
+/* ************************************************************************************** */
+.rm_mg {
+    margin: 0;
+}
+.contactHeaderTxt {
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 2rem !important;
+    line-height: 44px;
+    color: var(--primary);
+    text-align: center;
+    margin: 0 0 1vh 0;
+}
+
 @media screen and (max-width: 992px) and (min-width: 640px) {
     #testiMapImg {
         height: auto;
@@ -778,10 +792,6 @@ a.physiTempContactBtn.active {
         left: 7px;
         top: 7px;
     }
-    .physiContainerDiv#about {
-        padding-top: 0px;
-    }
-
     #physiPortPageLogo {
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
@@ -889,10 +899,7 @@ a.physiTempContactBtn.active {
     nav.navMain {
         display: none;
     }
-    nav.headerNoSideNav {
-        display: block;
-        /* margin-bottom: 1vh; */
-    }
+    
     nav.headerNoSideNav .sideNavBrandLogo {
         margin-left: 0;
     }
@@ -969,28 +976,218 @@ a.physiTempContactBtn.active {
     .feeds {
         background-color: var(--primary);
     }
+
+    /* ************************************************************************************ */
+    nav.headerNoSideNav {
+        display: block;
+        /* margin-bottom: 1vh; */
+        height: auto;
+    }
+    a.active {
+        border-bottom: 4px solid var(--primary);
+        padding: 0px 15px;
+    }
+    a.mobileNavLink {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+    i.material-icons.sidenavTriggerIcon {
+        color: var(--primary);
+        line-height: 5vh;
+    }
+    a.sidenav-trigger.sidenavTriggerLink {
+        width: 5vw;
+        height: 5vh;
+        border-radius: 50px;
+        margin-top: 3vh;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    ul li>a.sidenavLink {
+        font-size: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        color: var(--white);
+        letter-spacing: 0.7px;
+    }
+    .physiContainerDiv#about {
+        padding-top: 12vh;
+    }
+
+    /* About Me Img edit modal*/
+    a.modal-trigger.aboutImgEditBtn {
+        width: 4.5vw;
+        height: 5vh;
+        background-color: #edebeb;
+        border-radius: 50px;
+        position: absolute;
+        top: 27vh;
+        right: 7vw;
+    }
+    i.material-icons.editIcon {
+        color: #554c8a;
+        line-height: 35px;
+        display: flex;
+        justify-content: center;
+    }
+    div.aboutImgModalDiv {
+        width: 38%;
+        margin: 2.5vh auto 0 auto;
+
+    }
+    img.aboutImgModal {
+        box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+    }
+    a.editImgChangeBtn {
+        background-color: #524988;
+        color: var(--white);
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        padding: 0.3vh 2vw;
+    }
+    div.editImgChangeBtnDiv {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.8vh;
+    }
+    p.aboutImgSize {
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 1.8vh;
+    }
+    a.modal-close.editImgModalCloseBtn {
+        margin-left: 5vw;
+        color: var(--black);
+        text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+        font-size: 2rem;
+    }
+    div.aboutImgEditModalInnerDiv {
+        padding: 1vh 0 5vh 0;
+    }
+
+    /* About Me Writeup edit modal */
+    a.modal-trigger.aboutWriteUpsEditBtn {
+        width: 4.5vw;
+        height: 5vh;
+        background-color: #edebeb;
+        border-radius: 50px;
+        position: absolute;
+        top: 22vh;
+        left: 37vw;
+    }
+    a.modal-close.editWriteUpsModalCloseBtn {
+        margin-left: -3vw;
+        color: var(--black);
+        text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+        font-size: 2rem;
+    }
+    div.aboutWriteUpsEditModalInnerDiv {
+        width: 80%;
+        margin: auto;
+        padding: 1vh 0 5vh 0;
+    }
+    input.validate.aboutWriteUpsInput {
+        text-align: start;
+        height: 2vh;
+        border-bottom-color: var(--primary);
+    }
+    textarea.materialize-textarea.aboutWriteUpsInput {
+        text-align: start;
+        border: 1px solid var(--primary);
+        padding: 0.5vh 1.5vw;
+    }
+    p.aboutWriteUpsSize {
+        font-size: 0.7rem;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 0;
+    }
+    a.editWriteUpsSaveBtn {
+        background-color: #524988;
+        color: var(--white);
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        padding: 0.3vh 2vw;
+    }
+    div.editWriteUpsSaveBtnDiv {
+        margin-top: 0vh;
+    }
+
+    /* Service edit modal */
+    .whatIdoTxtRowDiv {
+        position: relative;
+    }
+    a.modal-trigger.servicesEditBtn {
+        width: 4.5vw;
+        height: 5vh;
+        background-color: #edebeb;
+        border-radius: 50px;
+        position: absolute;
+        top: 0.1vh;
+        right: 6vw;
+    }
+    textarea.materialize-textarea.servicesTextarea {
+        text-align: start;
+        border: 1px solid var(--primary);
+        padding: 0.5vh 1.5vw;
+        min-height: 17vh;
+    }
+    a.servicesAddMoreBtn {
+        color: var(--black);
+        text-decoration: underline;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: end;
+        position: relative;
+        bottom: 2vh;
+    }
+
+    /* Contact Me Edit Btn */
+    #testiContactFormTitleDiv {
+        position: relative;
+    }
+    a.modal-trigger.contactEditBtn {
+        width: 4.5vw;
+        height: 5vh;
+        background-color: #edebeb;
+        border-radius: 50px;
+        position: absolute;
+        top: 7vh;
+        right: 6vw;
+    }
+    p.servicesInputInstruct {
+        font-size: 0.7rem;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 0;
+        text-align: right;
+    }
+    .contactHeaderTxt {
+        font-family: "Montserrat", sans-serif;
+        font-weight: lighter;
+        font-size: 1.5rem !important;
+        line-height: 44px;
+        color: var(--primary);
+        text-align: center;
+        margin: 0 0 1vh 0;
+    }
+
+    a.sidenav-close.sidenavCloseBtn {
+        margin: 2vh 0 4vh 0;
+    }
+
+    i.material-icons.sidenavCloseIcon {
+        font-size: 3rem;
+    }
 }
+
 @media screen and (max-width: 640px) {
     nav.navMain {
         display: none;
     }
-    nav.headerNoSideNav {
-        display: block;
-        /* margin-bottom: 1vh; */
-    }
+    
     nav.headerNoSideNav .sideNavBrandLogo {
         margin-left: 0;
     }
-    ul.extHeaderNoSideNav {
-        display: flex;
-        background-color: #F6F3F3;
-        height: 40px;
-        line-height: 40px;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding: 0 2vw;
-        /* box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%); */
-    }
+    
     ul.extHeaderNoSideNav li {
         margin: 0 2.1vw;
     }
@@ -1001,11 +1198,6 @@ a.physiTempContactBtn.active {
     .row.about {
         display: flex;
         flex-direction: column;
-    }
-    .section.physiContainerDiv#about {
-        padding-top: 0vh;
-        width: 100%;
-        margin: 0;
     }
     .profileDesc {
         order: 2;
@@ -1256,5 +1448,219 @@ a.physiTempContactBtn.active {
     }
     .testimonialRw::-webkit-scrollbar {
         height: 0.5vh;
+    }
+
+
+    /* ************************************************************************************ */
+    ul.extHeaderNoSideNav {
+        display: flex;
+        background-color: #F6F3F3;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 2vw;
+        justify-content: space-around;
+        /* box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%); */
+    }
+    nav.headerNoSideNav {
+        display: block;
+        /* margin-bottom: 1vh; */
+        height: auto;
+    }
+    a.active {
+        border-bottom: 4px solid var(--primary);
+        padding: 0px 15px;
+    }
+    a.mobileNavLink {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+    i.material-icons.sidenavTriggerIcon {
+        color: var(--primary);
+        line-height: 5.5vh;
+    }
+    a.sidenav-trigger.sidenavTriggerLink {
+        width: 10vw;
+        height: 5vh;
+        border-radius: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    ul li>a.sidenavLink {
+        font-size: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        color: var(--white);
+        letter-spacing: 0.7px;
+    }
+    .section.physiContainerDiv#about {
+        padding-top: 5vh;
+        width: 100%;
+        margin: 0;
+    }
+
+
+    /* About Me Img edit modal*/
+    a.modal-trigger.aboutImgEditBtn {
+        width: 9vw;
+        height: 4vh;
+        background-color: #edebeb;
+        border-radius: 50px;
+        position: absolute;
+        top: 15vh;
+        right: 6vw;
+    }
+    i.material-icons.editIcon {
+        color: #554c8a;
+        line-height: 35px;
+        display: flex;
+        justify-content: center;
+    }
+    div.aboutImgModalDiv {
+        width: 50%;
+        margin: 2.5vh auto 0 auto;
+        
+    }
+    img.aboutImgModal {
+        box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+    }
+    a.editImgChangeBtn {
+        background-color: #524988;
+        color: var(--white);
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        padding: 0.3vh 2vw;
+    }
+    div.editImgChangeBtnDiv {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.8vh;
+    }
+    p.aboutImgSize {
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 1.8vh;
+    }
+    a.modal-close.editImgModalCloseBtn {
+        margin-left: 5vw;
+        color: var(--black);
+        text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+        font-size: 2rem;
+    }
+    div.aboutImgEditModalInnerDiv {
+        padding: 1vh 0 5vh 0;
+    }
+    
+    /* About Me Writeup edit modal */
+    a.modal-trigger.aboutWriteUpsEditBtn {
+        width: 9vw;
+        height: 4vh;
+        background-color: #edebeb;
+        border-radius: 50px;
+        position: absolute;
+        top: 68vh;
+        right: 6vw;
+    }
+    a.modal-close.editWriteUpsModalCloseBtn {
+        margin-left: -3vw;
+        color: var(--black);
+        text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+        font-size: 2rem;
+    }
+    div.aboutWriteUpsEditModalInnerDiv {
+        width: 80%;
+        margin: auto;
+        padding: 1vh 0 5vh 0;
+    }
+    input.validate.aboutWriteUpsInput {
+        text-align: start;
+        height: 2vh;
+        border-bottom-color: var(--primary);
+    }
+    textarea.materialize-textarea.aboutWriteUpsInput {
+        text-align: start;
+        border: 1px solid var(--primary);
+        padding: 0.5vh 1.5vw;
+    }
+    p.aboutWriteUpsSize {
+        font-size: 0.7rem;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 0;
+    }
+    a.editWriteUpsSaveBtn {
+        background-color: #524988;
+        color: var(--white);
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        padding: 0.3vh 2vw;
+    }
+    div.editWriteUpsSaveBtnDiv {
+        margin-top: 0vh;
+    }
+          
+    /* Service edit modal */
+    .whatIdoTxtRowDiv {
+        position: relative;
+    }
+    a.modal-trigger.servicesEditBtn {
+        width: 9vw;
+        height: 4vh;
+        background-color: #edebeb;
+        border-radius: 50px;
+        position: absolute;
+        top: 0.1vh;
+        right: 6vw;
+    }
+    textarea.materialize-textarea.servicesTextarea {
+        text-align: start;
+        border: 1px solid var(--primary);
+        padding: 0.5vh 1.5vw;
+        min-height: 17vh;
+    }
+    a.servicesAddMoreBtn {
+        color: var(--black);
+        text-decoration: underline;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: end;
+        position: relative;
+        bottom: 2vh;
+    }
+
+    /* Contact Me Edit Btn */
+    #testiContactFormTitleDiv {
+        position: relative;
+    }
+    a.modal-trigger.contactEditBtn {
+        width: 9vw;
+        height: 4vh;
+        background-color: #edebeb;
+        border-radius: 50px;
+        position: absolute;
+        top: 7vh;
+        right: 6vw;
+    }
+    p.servicesInputInstruct {
+        font-size: 0.7rem;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 0;
+        text-align: right;
+    }
+    .contactHeaderTxt {
+        font-family: "Montserrat", sans-serif;
+        font-weight: lighter;
+        font-size: 1.5rem !important;
+        line-height: 44px;
+        color: var(--primary);
+        text-align: center;
+        margin: 0 0 1vh 0;
+    }
+
+    a.sidenav-close.sidenavCloseBtn {
+        margin: 2vh 0 4vh 0;
+    }
+    i.material-icons.sidenavCloseIcon {
+        font-size: 3rem;
     }
 }

@@ -39,6 +39,42 @@
                                             View My curriculum vitae
                                         </a>
                                     </p>
+
+                                    <div class="hide-on-large-only">
+                                        <!-- About WriteUp Modal Trigger -->
+                                        <a class="modal-trigger aboutWriteUpsEditBtn" href="#aboutWriteUpsEditModal">
+                                            <i class="material-icons editIcon">edit</i>
+                                        </a>
+                                        
+                                        <!-- About WriteUp Modal Structure -->
+                                        <div id="aboutWriteUpsEditModal" class="modal">
+                                            <div class="modal-content">
+                                                <div class="aboutWriteUpsEditModalInnerDiv">
+                                                    <a href="#!" class="modal-close editWriteUpsModalCloseBtn">
+                                                        <i class="material-icons">keyboard_arrow_left</i>
+                                                    </a>
+                                                    <form>
+                                                        <div class="row rm_mg">
+                                                            <div class="input-field col s12">
+                                                                <input type="text" value="Hi, I'm Dr Chidinma Felix" class="validate aboutWriteUpsInput">
+                                                            </div>
+                                                            <div class="input-field col s12 rm_mg">
+                                                                <textarea class="materialize-textarea aboutWriteUpsInput" v-html="txt"></textarea>
+                                                            </div>
+                                                        </div>
+                                        
+                                                    </form>
+                                                    <p class="aboutWriteUpsSize">Description should not be more than 600 characters</p>
+                                                    <div class="editWriteUpsSaveBtnDiv">
+                                                        <a href="#" class="editWriteUpsSaveBtn">
+                                                            Save
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
 
@@ -59,6 +95,34 @@
                                     />
                                 </div>
                             </div>
+                            
+                            <div class="hide-on-large-only">
+                                <!-- About Edit Img Modal Trigger -->
+                                <a class="modal-trigger aboutImgEditBtn" href="#aboutImgEditModal">
+                                    <i class="material-icons editIcon">edit</i>
+                                </a>
+                                
+                                <!-- About Edit Img Modal Structure -->
+                                <div id="aboutImgEditModal" class="modal">
+                                    <div class="modal-content">
+                                        <div class="aboutImgEditModalInnerDiv">
+                                            <a href="#!" class="modal-close editImgModalCloseBtn">
+                                                <i class="material-icons">keyboard_arrow_left</i>
+                                            </a>
+                                            <div class="aboutImgModalDiv">
+                                                <img src="/media/img/surgeonhero.png" alt="doc.png" class="responsive-img aboutImgModal">
+                                            </div>
+                                            <div class="editImgChangeBtnDiv">
+                                                <a href="#" class="editImgChangeBtn">
+                                                    Change Image
+                                                </a>
+                                            </div>
+                                            <p class="aboutImgSize">The Image should be 45px width and 52px height</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                     <div v-else>
@@ -111,16 +175,21 @@
     </div>
 </template>
 <script>
-    export default {
-        props: {
-            bio: Object,
-            user: String,
-            services: Array,
-            location: String,
-            preview: String,
-            title: String,
-            tenant: String,
-        },
+export default {
+    data() {
+        return {
+            txt: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Curabitur arcu erat'
+        };
+    },
+    props: {
+        bio: Object,
+        user: String,
+        services: Array,
+        location: String,
+        preview: String,
+        title: String,
+        tenant: String,
+    },
     };
 </script>
 <style lang="scss" scoped>

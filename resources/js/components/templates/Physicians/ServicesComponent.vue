@@ -11,6 +11,43 @@
                                 WHAT I DO
                                 <span class="primaryColorBoxDesign1"></span>
                             </h3>
+
+                            <div class="hide-on-large-only">
+                                <!-- Services Modal Trigger -->
+                                <a class="modal-trigger servicesEditBtn" href="#servicesEditModal">
+                                    <i class="material-icons editIcon">edit</i>
+                                </a>
+                                
+                                <!-- Services Modal Structure -->
+                                <div id="servicesEditModal" class="modal">
+                                    <div class="modal-content">
+                                        <div class="aboutWriteUpsEditModalInnerDiv">
+                                            <a href="#!" class="modal-close editWriteUpsModalCloseBtn">
+                                                <i class="material-icons">keyboard_arrow_left</i>
+                                            </a>
+                                            <a href="#!" class="servicesAddMoreBtn">ADD MORE</a>
+                                            <form>
+                                                <div class="row rm_mg">
+                                                    <div class="input-field col s12">
+                                                        <input type="text" value="Service One" class="validate aboutWriteUpsInput">
+                                                    </div>
+                                                    <div class="input-field col s12 rm_mg">
+                                                        <textarea class="materialize-textarea servicesTextarea" placeholder="description"></textarea>
+                                                    </div>
+                                                </div>
+                                
+                                            </form>
+                                            <p class="aboutWriteUpsSize">Description should not be more than 200 characters</p>
+                                            <div class="editWriteUpsSaveBtnDiv">
+                                                <a href="#" class="editWriteUpsSaveBtn">
+                                                    Save
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                         <div class="servicesRw">
                             <div class="col s12 m4 l4">
