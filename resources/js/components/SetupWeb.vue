@@ -1168,11 +1168,11 @@ export default {
         prev3() {
             this.internshipCheck != 0 ? this.internshipCheck-- : null;
 
-            // if (this.internshipCheck < 1) {
-            //     this.view = 4;
-            //     this.academicCheck = 0;
-            //     this.attendedSchInfo = 0;
-            // }
+            if (this.internshipCheck < 1) {
+                this.view = 4;
+                this.academicCheck = 0;
+                this.attendedSchInfo = 0;
+            }
         },
         next3() {
             this.internshipCheck != 3 ? this.internshipCheck++ : null;
@@ -1184,10 +1184,10 @@ export default {
         prev4() {
             this.fellowshipCheck != 0 ? this.fellowshipCheck-- : null;
 
-            // if (this.fellowshipCheck < 2) {
-            //     this.view = 5;
-            //     this.internshipCheck = 2;
-            // }
+            if (this.fellowshipCheck < 2) {
+                this.view = 5;
+                this.internshipCheck = 2;
+            }
         },
         next4() {
             this.fellowshipCheck != 3 ? this.fellowshipCheck++ : null;
@@ -1211,10 +1211,10 @@ export default {
         prev5() {
             this.residencyCheck != 0 ? this.residencyCheck-- : null;
 
-            // if (this.residencyCheck < 2) {
-            //     this.view = 6;
-            //     this.fellowshipCheck = 2;
-            // }
+            if (this.residencyCheck < 2) {
+                this.view = 6;
+                this.fellowshipCheck = 2;
+            }
         }, 
         next5() {
             this.residencyCheck != 3 ? this.residencyCheck++ : null;
@@ -1226,10 +1226,10 @@ export default {
         prev6() {
             this.experienceCheck != 0 ? this.experienceCheck-- : null;
 
-            // if (this.experienceCheck == 0) {
-            //     this.view = 7;
-            //     this.residencyCheck = 2;
-            // }
+            if (this.experienceCheck == 0) {
+                this.view = 7;
+                this.residencyCheck = 2;
+            }
         },
         next6() {
             this.experienceCheck != 5 ? this.experienceCheck++ : null;
@@ -1247,10 +1247,10 @@ export default {
         prev7() {
             this.addQualificaion != 0 ? this.addQualificaion-- : null;
 
-            // if (this.addQualificaion == 0) {
-            //     this.view = 8;
-            //     this.experienceCheck = 4;
-            // }
+            if (this.addQualificaion == 0) {
+                this.view = 8;
+                this.experienceCheck = 4;
+            }
         },
         next7() {
             this.addQualificaion != 5 ? this.addQualificaion++ : null;
@@ -1274,10 +1274,10 @@ export default {
         prev8() {
             this.servicesCheck != 0 ? this.servicesCheck-- : null;
 
-            // if (this.servicesCheck < 2) {
-            //     this.view = 9;
-            //     this.addQualificaion = 4;
-            // }
+            if (this.servicesCheck < 2) {
+                this.view = 9;
+                this.addQualificaion = 4;
+            }
         },
         next8() {
             this.servicesCheck != 3 ? this.servicesCheck++ : null;
