@@ -883,12 +883,31 @@
                             <span class="skipTxt">skip</span>
                             <i class="material-icons skipBtnIcon" @click="next()">keyboard_arrow_right</i> -->
                         </div>
+                        <div v-if="view == 4 && academicCheck == 0">
+                            <div class="skipDiv">
+                                <button class="skipBtn" 
+                                    @click="prev10()" 
+                                    :disabled="academicCheck == academicCheck.length"
+                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
+                                >
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                </button>
+                                    <span class="skipTxt">skip</span>
+                                <button class="skipBtn" 
+                                    @click="next10()" 
+                                    :disabled="academicCheck == academicCheck.length"
+                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
+                                >
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                </button>
+                            </div>
+                        </div>
                         <div v-if="view == 4 && academicCheck == 1">
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev1()" 
-                                    :disabled="academicCheck == 0"
-                                    :class="attendedSchInfo > 0 ? 'btnOn' : 'btnOff'"
+                                    :disabled="academicCheck == academicCheck.length"
+                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
@@ -906,8 +925,8 @@
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev2()" 
-                                    :disabled="academicCheck == 0"
-                                    :class="attendedMedSch > 0 ? 'btnOn' : 'btnOff'"
+                                    :disabled="academicCheck == academicCheck.length"
+                                    :class="attendedMedSch != 3 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
@@ -925,15 +944,15 @@
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev3()" 
-                                    :disabled="internshipCheck == 0"
-                                    :class="internshipCheck > 0 ? 'btnOn' : 'btnOff'"
+                                    :disabled="internshipCheck == internshipCheck.length"
+                                    :class="internshipCheck != 3 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
                                     <span class="skipTxt">skip</span>
                                 <button class="skipBtn" @click="next3()" 
-                                    :disabled="internshipCheck == 0"
-                                    :class="internshipCheck < 1 ? 'btnOff' : 'btnOn'"
+                                    :disabled="internshipCheck == internshipCheck.length"
+                                    :class="internshipCheck != 3 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
@@ -943,16 +962,16 @@
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev4()" 
-                                    :disabled="fellowshipCheck == 0"
-                                    :class="fellowshipCheck > 0 ? 'btnOn' : 'btnOff'"
+                                    :disabled="fellowshipCheck == fellowshipCheck.length"
+                                    :class="fellowshipCheck != 3 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
                                     <span class="skipTxt">skip</span>
                                 <button class="skipBtn" 
                                     @click="next4()" 
-                                    :disabled="fellowshipCheck == 0"
-                                    :class="fellowshipCheck < 1 ? 'btnOff' : 'btnOn'"
+                                    :disabled="fellowshipCheck == fellowshipCheck.length"
+                                    :class="fellowshipCheck != 3 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
@@ -962,16 +981,16 @@
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev5()" 
-                                    :disabled="residencyCheck == 0"
-                                    :class="residencyCheck > 0 ? 'btnOn' : 'btnOff'"
+                                    :disabled="residencyCheck == residencyCheck.length"
+                                    :class="residencyCheck != 3 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
                                     <span class="skipTxt">skip</span>
                                 <button class="skipBtn" 
                                     @click="next5()" 
-                                    :disabled="residencyCheck == 0"
-                                    :class="residencyCheck < 1 ? 'btnOff' : 'btnOn'"
+                                    :disabled="residencyCheck == residencyCheck.length"
+                                    :class="residencyCheck != 3 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
@@ -981,16 +1000,16 @@
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev6()" 
-                                    :disabled="experienceCheck == 0"
-                                    :class="experienceCheck > 0 ? 'btnOn' : 'btnOff'"
+                                    :disabled="experienceCheck == experienceCheck.length"
+                                    :class="experienceCheck != 5 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
                                     <span class="skipTxt">skip</span>
                                 <button class="skipBtn" 
                                     @click="next6()" 
-                                    :disabled="experienceCheck > 4"
-                                    :class="experienceCheck > 4 ? 'btnOff' : 'btnOn'"
+                                    :disabled="experienceCheck == experienceCheck.length"
+                                    :class="experienceCheck != 5 ? 'btnOn' : 'btnOff'"
                                 >
                                     <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
@@ -1000,15 +1019,15 @@
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev7()" 
-                                    :disabled="addQualificaion == 0"
-                                    :class="addQualificaion > 0 ? 'btnOn' : 'btnOff'"
+                                    :disabled="addQualificaion == addQualificaion.length"
+                                    :class="addQualificaion > 5 ? 'btnOff' : 'btnOn'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
                                     <span class="skipTxt">skip</span>
                                 <button class="skipBtn" 
                                     @click="next7()" 
-                                    :disabled="addQualificaion > 5"
+                                    :disabled="addQualificaion == addQualificaion.length"
                                     :class="addQualificaion > 5 ? 'btnOff' : 'btnOn'"
                                 >
                                     <i class="material-icons">keyboard_arrow_right</i>
@@ -1019,8 +1038,8 @@
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev8()" 
-                                    :disabled="servicesCheck == 0"
-                                    :class="servicesCheck > 0 ? 'btnOn' : 'btnOff'"
+                                    :disabled="servicesCheck >= 3"
+                                    :class="servicesCheck >= 3 ? 'btnOff' : 'btnOn'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
@@ -1038,8 +1057,8 @@
                             <div class="skipDiv">
                                 <button class="skipBtn" 
                                     @click="prev9()" 
-                                    :disabled="view == 11"
-                                    :class="view >= 11 ? 'btnOff' : 'btnOn'"
+                                    :disabled="view < 10"
+                                    :class="view < 10 ? 'btnOff' : 'btnOn'"
                                 >
                                     <i class="material-icons">keyboard_arrow_left</i>
                                 </button>
@@ -1080,6 +1099,8 @@ export default {
             experienceCheck: 0,
             addQualificaion: 0,
             servicesCheck: 0,
+
+            medSchPrevBtnCheck: 0,
         };
     },
     mounted() { },
@@ -1095,22 +1116,41 @@ export default {
         },
         undergradMedSelected() {
             this.academicCheck = 1;
+            this.attendedSchInfo = 0;
         },
         medSelected() {
             this.academicCheck = 2;
+            this.attendedMedSch = 0;
         },
         prev1() {
             this.attendedSchInfo != 0 ? this.attendedSchInfo-- : null;
+
+            // if (this.attendedSchInfo < 1) {
+            //     this.view = 4;
+            //     this.academicCheck = 1;
+            //     this.attendedSchInfo = 0;
+            // }
         },
         next1() {
             this.attendedSchInfo != 3 ? this.attendedSchInfo++ : null;
-
+            
             if (this.attendedSchInfo >= 3) {
                 this.academicCheck = 2;
+                this.attendedMedSch = 0;
             }
         },
         prev2() {
             this.attendedMedSch != 0 ? this.attendedMedSch-- : null;
+
+            // if (this.attendedMedSch < 1 && this.medSchPrevBtnCheck == 0) {
+            //     this.academicCheck--;
+            //     this.academicCheck--;
+            // } else {
+            //     this.academicCheck--;
+            //     this.attendedSchInfo = 2;
+            // }
+
+            // this.medSchPrevBtnCheck = 0;
         },
         next2() {
             this.attendedMedSch != 3 ? this.attendedMedSch++ : null;
@@ -1127,6 +1167,12 @@ export default {
         },
         prev3() {
             this.internshipCheck != 0 ? this.internshipCheck-- : null;
+
+            // if (this.internshipCheck < 1) {
+            //     this.view = 4;
+            //     this.academicCheck = 0;
+            //     this.attendedSchInfo = 0;
+            // }
         },
         next3() {
             this.internshipCheck != 3 ? this.internshipCheck++ : null;
@@ -1137,6 +1183,11 @@ export default {
         },
         prev4() {
             this.fellowshipCheck != 0 ? this.fellowshipCheck-- : null;
+
+            // if (this.fellowshipCheck < 2) {
+            //     this.view = 5;
+            //     this.internshipCheck = 2;
+            // }
         },
         next4() {
             this.fellowshipCheck != 3 ? this.fellowshipCheck++ : null;
@@ -1159,6 +1210,11 @@ export default {
         },
         prev5() {
             this.residencyCheck != 0 ? this.residencyCheck-- : null;
+
+            // if (this.residencyCheck < 2) {
+            //     this.view = 6;
+            //     this.fellowshipCheck = 2;
+            // }
         }, 
         next5() {
             this.residencyCheck != 3 ? this.residencyCheck++ : null;
@@ -1169,6 +1225,11 @@ export default {
         },
         prev6() {
             this.experienceCheck != 0 ? this.experienceCheck-- : null;
+
+            // if (this.experienceCheck == 0) {
+            //     this.view = 7;
+            //     this.residencyCheck = 2;
+            // }
         },
         next6() {
             this.experienceCheck != 5 ? this.experienceCheck++ : null;
@@ -1185,6 +1246,11 @@ export default {
         },
         prev7() {
             this.addQualificaion != 0 ? this.addQualificaion-- : null;
+
+            // if (this.addQualificaion == 0) {
+            //     this.view = 8;
+            //     this.experienceCheck = 4;
+            // }
         },
         next7() {
             this.addQualificaion != 5 ? this.addQualificaion++ : null;
@@ -1207,6 +1273,11 @@ export default {
         },
         prev8() {
             this.servicesCheck != 0 ? this.servicesCheck-- : null;
+
+            // if (this.servicesCheck < 2) {
+            //     this.view = 9;
+            //     this.addQualificaion = 4;
+            // }
         },
         next8() {
             this.servicesCheck != 3 ? this.servicesCheck++ : null;
@@ -1227,7 +1298,20 @@ export default {
         servicesNotSelected() {
             this.view = 11;
         },
-        
+        prev9() {
+            this.servicesCheck != 0 ? this.servicesCheck-- : null;
+
+            if (this.servicesCheck < 3) {
+                this.view = 10;
+                this.servicesCheck = 0;
+            }
+        },
+        prev10() {
+            this.view = 3;
+        },
+        next10() {
+            this.academicCheck = 1;
+        }
     },
 };
 </script>
