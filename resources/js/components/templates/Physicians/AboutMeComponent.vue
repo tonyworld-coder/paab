@@ -95,7 +95,7 @@
                                     />
                                 </div>
                             </div>
-                            
+
                             <div class="hide-on-large-only">
                                 <!-- About Edit Img Modal Trigger -->
                                 <a class="modal-trigger aboutImgEditBtn" href="#aboutImgEditModal">
@@ -117,7 +117,7 @@
                                                     Change Image
                                                 </a>
                                             </div>
-                                            <p class="aboutImgSize">The Image should be 45px width and 52px height</p>
+                                            <p class="aboutImgSize">The Image should be 451px width and 512px height</p>
                                         </div>
                                     </div>
                                 </div>
