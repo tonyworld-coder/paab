@@ -176,5 +176,9 @@ Route::get('/setupweb', function () {
 });
 
 Route::get('/milestones', function () {
-    return view('milestones');
+    return view('tempSettings.milestones');
+});
+
+Route::get('/socialmedia', function () {
+    return view('tempSettings.socialmedia');
 });

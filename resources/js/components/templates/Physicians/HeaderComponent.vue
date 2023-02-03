@@ -127,7 +127,7 @@
             <li><div class="divider"></div></li>
             <li><a href="#!" class="sidenavLink">Services</a></li>
             <li><div class="divider"></div></li>
-            <li><a href="#!" class="sidenavLink">Social Media</a></li>
+            <li><a href="/socialmedia" class="sidenavLink">Social Media</a></li>
             <li><div class="divider"></div></li>
             <li><a href="#!" class="sidenavLink">CV Generator</a></li>
             <li><div class="divider"></div></li>
