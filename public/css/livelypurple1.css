@@ -1015,29 +1015,35 @@ a.physiTempContactBtn.active {
     }
 
     /* About Me Img edit modal*/
+    /* ********************************************** */
     a.modal-trigger.aboutImgEditBtn {
         width: 4.5vw;
         height: 5vh;
         background-color: #edebeb;
         border-radius: 50px;
         position: absolute;
-        top: 27vh;
-        right: 7vw;
+        top: 25vh;
+        right: 13vw;
     }
     i.material-icons.editIcon {
         color: #554c8a;
-        line-height: 35px;
+        line-height: 44px;
         display: flex;
         justify-content: center;
+        font-size: 2.3rem;
     }
     div.aboutImgModalDiv {
-        width: 38%;
+        width: 50%;
+        height: 37vh;
         margin: 2.5vh auto 0 auto;
 
     }
     img.aboutImgModal {
+        width: 100%;
+        height: 100%;
         box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
     }
+    /* ************************************************** */
     a.editImgChangeBtn {
         background-color: #524988;
         color: var(--white);
@@ -1067,15 +1073,17 @@ a.physiTempContactBtn.active {
     }
 
     /* About Me Writeup edit modal */
+    /* *********************************************** */
     a.modal-trigger.aboutWriteUpsEditBtn {
         width: 4.5vw;
         height: 5vh;
         background-color: #edebeb;
         border-radius: 50px;
         position: absolute;
-        top: 22vh;
-        left: 37vw;
+        top: 20vh;
+        left: 40vw;
     }
+    /* *********************************************** */
     a.modal-close.editWriteUpsModalCloseBtn {
         margin-left: -3vw;
         color: var(--black);
@@ -1117,15 +1125,17 @@ a.physiTempContactBtn.active {
     .whatIdoTxtRowDiv {
         position: relative;
     }
+    /* ************************************************ */
     a.modal-trigger.servicesEditBtn {
         width: 4.5vw;
         height: 5vh;
         background-color: #edebeb;
         border-radius: 50px;
         position: absolute;
-        top: 0.1vh;
-        right: 6vw;
+        top: -3vh;
+        right: 30vw;
     }
+    /* ************************************************ */
     textarea.materialize-textarea.servicesTextarea {
         text-align: start;
         border: 1px solid var(--primary);
@@ -1147,31 +1157,33 @@ a.physiTempContactBtn.active {
     #testiContactFormTitleDiv {
         position: relative;
     }
+    /* ************************************************ */
     a.modal-trigger.contactEditBtn {
         width: 4.5vw;
         height: 5vh;
         background-color: #edebeb;
         border-radius: 50px;
         position: absolute;
-        top: 7vh;
-        right: 6vw;
+        top: 6vh;
+        right: 30vw;
     }
+    .contactHeaderTxt {
+        font-family: "Montserrat", sans-serif;
+        font-weight: lighter;
+        font-size: 1.9rem !important;
+        line-height: 44px;
+        color: var(--primary);
+        text-align: center;
+        margin: 0 0 1vh 0;
+    }
+    /* ************************************************ */
+    
     p.servicesInputInstruct {
         font-size: 0.7rem;
         font-family: 'Poppins', sans-serif;
         margin-top: 0;
         text-align: right;
     }
-    .contactHeaderTxt {
-        font-family: "Montserrat", sans-serif;
-        font-weight: lighter;
-        font-size: 1.5rem !important;
-        line-height: 44px;
-        color: var(--primary);
-        text-align: center;
-        margin: 0 0 1vh 0;
-    }
-
     a.sidenav-close.sidenavCloseBtn {
         margin: 2vh 0 4vh 0;
     }
@@ -1518,14 +1530,18 @@ a.physiTempContactBtn.active {
         display: flex;
         justify-content: center;
     }
+    /* ************************************************* */
     div.aboutImgModalDiv {
-        width: 50%;
+        width: 55%;
+        height: 25vh;
         margin: 2.5vh auto 0 auto;
-        
     }
     img.aboutImgModal {
+        width: 100%;
+        height: 100%;
         box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
     }
+    /* ************************************************* */
     a.editImgChangeBtn {
         background-color: #524988;
         color: var(--white);

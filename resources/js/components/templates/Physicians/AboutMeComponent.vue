@@ -110,7 +110,7 @@
                                                 <i class="material-icons">keyboard_arrow_left</i>
                                             </a>
                                             <div class="aboutImgModalDiv">
-                                                <img src="/media/img/surgeonhero.png" alt="doc.png" class="responsive-img aboutImgModal">
+                                                <img src="/media/img/surgeonhero.png" alt="doc.png" class="aboutImgModal">
                                             </div>
                                             <div class="editImgChangeBtnDiv">
                                                 <a href="#" class="editImgChangeBtn">

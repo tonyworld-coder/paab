@@ -217,9 +217,7 @@
         display: flex;
         justify-content: center;
     }
-    .primaryColorDocsImg {
-        height: 22vh;
-    }
+    
     /* Acadamic Section */
     .radioBtnSpan {
         font-family: 'Poppins', sans-serif;
@@ -316,6 +314,11 @@
     [type="radio"].with-gap:checked+span:before,
     [type="radio"].with-gap:checked+span:after {
         border: 2px solid var(--primary);
+    }
+
+    /* Changed the height from 22vh to 22.5vh */
+    .primaryColorDocsImg {
+        height: 22.5vh;
     }
 }
 
@@ -624,5 +627,10 @@
     [type="radio"].with-gap:checked+span:before,
     [type="radio"].with-gap:checked+span:after {
         border: 2px solid var(--primary);
+    }
+
+    /* Added this here */
+    .primaryColorDocsImg {
+        height: 19.5vh;
     }
 }

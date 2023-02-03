@@ -58,6 +58,7 @@ import SettingsComponent from './components/templates/Physicians/Settings/Settin
 import mails from './components/shared/Messages';
 
 import SetupWeb from "./components/SetupWeb";
+import Milestones from "./components/templates/Physicians/Settings/tempSettings/Milestones";
 
 
 
@@ -98,6 +99,7 @@ app.component('physician-website-settings', SettingsComponent);
 app.component("mail-component", mails);
 
 app.component("setup-web-component", SetupWeb);
+app.component("milestones-component", Milestones);
 
 
 /**

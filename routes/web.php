@@ -172,5 +172,9 @@ Route::prefix('supre')->middleware(['auth', 'can:run_superAdmin_ops'])->group(fu
 
 
 Route::get('/setupweb', function () {
-        return view('setupweb');
-    });
+    return view('setupweb');
+});
+
+Route::get('/milestones', function () {
+    return view('milestones');
+});

@@ -121,7 +121,7 @@
             <li><div class="divider"></div></li>
             <li><a href="#!" class="sidenavLink">About</a></li>
             <li><div class="divider"></div></li>
-            <li><a href="#!" class="sidenavLink">Milestones</a></li>
+            <li><a href="/milestones" class="sidenavLink">Milestones</a></li>
             <li><div class="divider"></div></li>
             <li><a href="#!" class="sidenavLink">Public Features</a></li>
             <li><div class="divider"></div></li>
@@ -132,25 +132,27 @@
             <li><a href="#!" class="sidenavLink">CV Generator</a></li>
             <li><div class="divider"></div></li>
         </ul>
+
     </div>
 </template>
 <script>
     export default {
+        components: {},
         data() {
             return {
-                scrollPosition: null
+                scrollPosition: null,
             };
         },
         props: {
             user: String,
         },
         mounted() {
-             window.addEventListener('scroll', this.updateScroll);
+            window.addEventListener('scroll', this.updateScroll);
         },
         methods: {
             updateScroll() {
                 this.scrollPosition = window.scrollY
-            }
+            }, 
         },
         computed: {},
     };
