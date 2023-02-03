@@ -106,7 +106,7 @@
                         </p>
                         
                         <div class="viewWebBtnDiv">
-                            <a href="#" class="btn viewWebBtn">
+                            <a href="/preview/1" class="btn viewWebBtn">
                                 View website
                             </a>
                         </div>
@@ -134,11 +134,12 @@
                 </div>
             </div>
         </div>
+
     </div>
 </template>
 <script>
 export default {
-    components: {},
+    components: { },
     data() {
         return {
             view: 0,
@@ -156,7 +157,8 @@ export default {
             this.view = 1;
         },
         noPubEvent() {
-            this.view = 5;
+            // this.view = 5;
+            window.location.href = "/preview/1";
         },
         addMore() {
             this.view = 1;
