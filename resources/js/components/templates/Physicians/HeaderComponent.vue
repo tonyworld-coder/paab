@@ -123,7 +123,7 @@
             <li><div class="divider"></div></li>
             <li><a href="/milestones" class="sidenavLink">Milestones</a></li>
             <li><div class="divider"></div></li>
-            <li><a href="#!" class="sidenavLink">Public Features</a></li>
+            <li><a href="/publicFeature" class="sidenavLink">Public Features</a></li>
             <li><div class="divider"></div></li>
             <li><a href="#!" class="sidenavLink">Services</a></li>
             <li><div class="divider"></div></li>

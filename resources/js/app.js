@@ -60,6 +60,7 @@ import mails from './components/shared/Messages';
 import SetupWeb from "./components/SetupWeb";
 import Milestones from "./components/templates/Physicians/Settings/tempSettings/Milestones";
 import SocialMedia from "./components/templates/Physicians/Settings/tempSettings/SocialMedia";
+import PublicFeature from "./components/templates/Physicians/Settings/tempSettings/PublicFeature";
 
 
 
@@ -102,6 +103,7 @@ app.component("mail-component", mails);
 app.component("setup-web-component", SetupWeb);
 app.component("milestones-component", Milestones);
 app.component("social-media-component", SocialMedia);
+app.component("public-feature-component", PublicFeature);
 
 
 /**

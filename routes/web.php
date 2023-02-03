@@ -182,3 +182,7 @@ Route::get('/milestones', function () {
 Route::get('/socialmedia', function () {
     return view('tempSettings.socialmedia');
 });
+
+Route::get('/publicFeature', function () {
+    return view('tempSettings.publicfeature');
+});
