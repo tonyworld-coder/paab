@@ -283,7 +283,7 @@
                         </p>
 
                         <div class="viewWebBtnDiv">
-                            <a href="#" class="btn viewWebBtn">
+                            <a href="/preview/1" class="btn viewWebBtn">
                                 View website
                             </a>
                         </div>
