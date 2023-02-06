@@ -99,9 +99,10 @@
                     </div>
 
                     <div v-show="view == 5">
-                        <p class="milestoneCongratMsg">Congratulations!!!</p>
                         <p class="contentTitle">
-                            you have setup the public feature section of your website. 
+                            <span class="milestoneCongratMsg">Congratulations!!!</span>
+                            <br>
+                            you have setup the public feature section of your website.
                             please click the link to preview on your website
                         </p>
                         

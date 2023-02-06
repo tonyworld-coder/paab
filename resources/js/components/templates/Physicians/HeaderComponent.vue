@@ -117,9 +117,9 @@
                 </a>
             </li>
 
-            <li><a href="#!" class="sidenavLink">General</a></li>
+            <li><a href="/general" class="sidenavLink">General</a></li>
             <li><div class="divider"></div></li>
-            <li><a href="#!" class="sidenavLink">About</a></li>
+            <li><a href="/bio" class="sidenavLink">Bio</a></li>
             <li><div class="divider"></div></li>
             <li><a href="/milestones" class="sidenavLink">Milestones</a></li>
             <li><div class="divider"></div></li>

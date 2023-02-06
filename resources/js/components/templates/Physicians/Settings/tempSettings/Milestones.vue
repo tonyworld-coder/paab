@@ -173,9 +173,11 @@
                     </div>
 
                     <div v-show="view == 9">
-                        <p class="milestoneCongratMsg">Congratulations!!!</p>
-                        <p class="contentTitle">on completing your milestone process</p>
-                    
+                        <p class="contentTitle">
+                            <span class="milestoneCongratMsg">Congratulations!!!</span>
+                            <br>
+                            on completing your milestone process
+                        </p>
                         <div class="viewWebBtnDiv">
                             <a href="/preview/1" class="btn viewWebBtn">
                                 View website

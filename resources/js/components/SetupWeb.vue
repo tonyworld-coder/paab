@@ -36,7 +36,6 @@
                             <div class="row formInnerDiv">
                                 <div class="input-field col s2">
                                     <select>
-                                        <option value="" disabled selected>MD</option>
                                         <option value="1">MD</option>
                                         <option value="2">Dr</option>
                                     </select>

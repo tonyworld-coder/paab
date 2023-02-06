@@ -186,3 +186,13 @@ Route::get('/socialmedia', function () {
 Route::get('/publicFeature', function () {
     return view('tempSettings.publicfeature');
 });
+
+// New added Template settings
+Route::get('/general', function () {
+    return view('tempSettings.general');
+});
+
+Route::get('/bio', function () {
+    return view('tempSettings.bio');
+});
+

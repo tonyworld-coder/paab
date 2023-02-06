@@ -61,6 +61,8 @@ import SetupWeb from "./components/SetupWeb";
 import Milestones from "./components/templates/Physicians/Settings/tempSettings/Milestones";
 import SocialMedia from "./components/templates/Physicians/Settings/tempSettings/SocialMedia";
 import PublicFeature from "./components/templates/Physicians/Settings/tempSettings/PublicFeature";
+import General from "./components/templates/Physicians/Settings/tempSettings/General";
+import Bio from "./components/templates/Physicians/Settings/tempSettings/Bio";
 
 
 
@@ -104,6 +106,8 @@ app.component("setup-web-component", SetupWeb);
 app.component("milestones-component", Milestones);
 app.component("social-media-component", SocialMedia);
 app.component("public-feature-component", PublicFeature);
+app.component("general-component", General);
+app.component("bio-component", Bio);
 
 
 /**

@@ -276,9 +276,10 @@
                     </div>
 
                     <div v-show="view == 9">
-                        <p class="milestoneCongratMsg">Congratulations!!!</p>
                         <p class="contentTitle">
-                            on completing your Social media process. 
+                            <span class="milestoneCongratMsg">Congratulations!!!</span>
+                            <br>
+                            on completing your Social media process.
                             please click the link to preview on your website
                         </p>
 

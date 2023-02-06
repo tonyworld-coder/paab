@@ -113,9 +113,11 @@
                                                 <img src="/media/img/surgeonhero.png" alt="doc.png" class="aboutImgModal">
                                             </div>
                                             <div class="editImgChangeBtnDiv">
-                                                <a href="#" class="editImgChangeBtn">
+                                                <a href="#" class="editImgChangeBtn" @click="$refs.file.click()">
                                                     Change Image
                                                 </a>
+
+                                                <input type="file" ref="file" style="display: none;" />
                                             </div>
                                             <p class="aboutImgSize">The Image should be 451px width and 512px height</p>
                                         </div>
