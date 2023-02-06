@@ -5,208 +5,206 @@
                 <div class="primaryColorDiv">
                     <div class="headerDiv">
                         <a href="/">
-                            <img src="/media/img/setupWeb/wcdMobileLogo.png" alt="wcdMobileLogo.png">
+                            <img src="/media/img/setupWeb/wcdMobileLogo.png" alt="wcdMobileLogo.png" class="hide-on-large-only wcdMobileLogo">
+                            <img src="/media/img/setupWeb/wcdMobileLogoLarge.png" alt="wcdMobileLogoLarge.png" class="hide-on-med-and-down">
                         </a>
                         <p class="headerTitle">
                             It is time for the world
                             to hear your pulse
                         </p>
                     </div>
-                    <div>
+                    <div class="hide-on-large-only">
                         <img src="/media/img/setupWeb/3dDoctors.png" alt="3dDoctors.png" class="primaryColorDocsImg">
+                    </div>
+                    <div class="hide-on-med-and-down">
+                        <img src="/media/img/setupWeb/3dDoctorsLarge.png" alt="3dDoctorsLarge.png" class="primaryColorDocsImgLarge">
                     </div>
                 </div>
             </div>
             <div class="col s12">
                 <div class="contentDiv">
-                    <!-- Get Started Section -->
-                    <div v-show="view == 0">
-                        <p class="contentTitle">Lets help you setup your website</p>
-                        
-                        <div class="getStartedBtnDiv">
-                            <a href="#" class="waves-effect waves-light btn getStartedBtn" @click="getStarted()">GET STARTED</a>
-                        </div>
-                    </div>
-
-                    <!-- Confirm your name section -->
-                    <div v-show="view == 1">
-                        <p class="contentTitle">Is it okay to address you as follows?</p>
-
-                        <form class="mainForm">
-                            <div class="row formInnerDiv">
-                                <div class="input-field col s2">
-                                    <select>
-                                        <option value="1">MD</option>
-                                        <option value="2">Dr</option>
-                                    </select>
-                                </div>
-
-                                <div class="input-field col s3">
-                                    <input type="text" value="Doe" class="validate">
-                                </div>
-                                <div class="input-field col s3">
-                                    <input type="text" value="John" class="validate">
-                                </div>
-                                <div class="input-field col s3">
-                                    <input type="text" value="Chigozie" class="validate">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Domain name check section -->
-                    <div v-show="view == 2">
-                        <p class="contentTitle">Are you ok with this domain name?</p>
-
-                        <form class="mainForm">
-                            <div class="row formInnerDiv">
-                                <div class="input-field col s8">
-                                    <input type="text" value="johndoemed.com" class="validate">
-                                    <p class="unAvailTxt">
-                                        Not satisfied with the suggestions below, type in
-                                        your preferred domain name
-                                    </p>
-                                </div>
-                                <div class="col s4">
-                                    <p class="unAvailTitle">Unavailable</p>
-                                </div>
-
-                                
-                            </div>
-                        </form>
-
-                        <div class="row">
-                            <div class="col s12 domianMainDiv">
-                                <p class="primaryTxt">Suggestions</p>
-                        
-                                <div class="col s1">
-                                    <p class="domainSelectP">
-                                        <label>
-                                            <input class="with-gap" name="domainName" type="radio" />
-                                            <span></span>
-                                        </label>
-                                    </p>
-                                </div>
-                                <div class="col s11">
-                                    <table>
-                                        <!-- Table Head Section if ever needed
-                                        <thead><tr><th></th></tr></thead> -->
-                                        <tbody>
-                                            <tr>
-                                                <td class="domainTdName">mddoejohn.com</td>
-                                                <td class="domainTdState">Available</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="col s12 domianMainDiv">
-                                <div class="col s1">
-                                    <p class="domainSelectP">
-                                        <label>
-                                            <input class="with-gap" name="domainName" type="radio" />
-                                            <span></span>
-                                        </label>
-                                    </p>
-                                </div>
-                                <div class="col s11">
-                                    <table>
-                                        <!-- Table Head Section if ever needed
-                                        <thead><tr><th></th></tr></thead> -->
-                                        <tbody>
-                                            <tr>
-                                                <td class="domainTdName">johnmddoe.com</td>
-                                                <td class="domainTdState">Available</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="col s12 domianMainDiv">
-                                <div class="col s1">
-                                    <p class="domainSelectP">
-                                        <label>
-                                            <input class="with-gap" name="domainName" type="radio" />
-                                            <span></span>
-                                        </label>
-                                    </p>
-                                </div>
-                                <div class="col s11">
-                                    <table>
-                                        <!-- Table Head Section if ever needed
-                                        <thead><tr><th></th></tr></thead> -->
-                                        <tbody>
-                                            <tr>
-                                                <td class="domainTdName">johndoe.com</td>
-                                                <td class="domainTdState">Available</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="col s12 domianMainDiv">
-                                <div class="col s1">
-                                    <p class="domainSelectP">
-                                        <label>
-                                            <input class="with-gap" name="domainName" type="radio" />
-                                            <span></span>
-                                        </label>
-                                    </p>
-                                </div>
-                                <div class="col s11">
-                                    <table>
-                                        <!-- Table Head Section if ever needed
-                                        <thead><tr><th></th></tr></thead> -->
-                                        <tbody>
-                                            <tr>
-                                                <td class="domainTdName">mdjohn.com</td>
-                                                <td class="domainTdState">Available</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                    <div class="contentInnerDiv">
+                    
+                        <!-- Get Started Section -->
+                        <div v-show="view == 0">
+                            <p class="contentTitle">Lets help you setup your website</p>
+                            
+                            <div class="getStartedBtnDiv">
+                                <a href="#" class="waves-effect waves-light btn getStartedBtn" @click="getStarted()">GET STARTED</a>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Client Img check section -->
-                    <div v-show="view == 3">
-                        <p class="contentTitle">Are you ok with this picture?</p>
-                         
-                        <div class="proImgDiv">
-                            <img src="/media/img/setupWeb/profilePics.png" alt="profilePics.png" class="proImg">
+                        <!-- Confirm your name section -->
+                        <div v-show="view == 1">
+                            <p class="contentTitle">Is it okay to address you as follows?</p>
+
+                            <form class="mainForm">
+                                <div class="row formInnerDiv">
+                                    <div class="input-field col s2">
+                                        <select>
+                                            <option value="1">MD</option>
+                                            <option value="2">Dr</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-field col s3">
+                                        <input type="text" value="Doe" class="validate">
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <input type="text" value="John" class="validate">
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <input type="text" value="Chigozie" class="validate">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
 
-                        <div class="proImgBtnMainDiv">
-                            <div class="proImgBtnContainDiv">
-                                <a href="#" class="proImgYesBtn">Yes</a>
-                                <div>
-                                    <form action="#">
-                                        <div class="file-field input-field flex">
-                                            <div class="file-path-wrapper proImgInputDiv">
-                                                <input class="file-path validate proImgInput" placeholder="No" type="text">
-                                            </div>
-                                            <div>
-                                                <i class="material-icons proInputFileUpladIcon">file_upload</i>
-                                                <input type="file">
-                                            </div>
-                                        </div>
+                        <!-- Domain name check section -->
+                        <div v-show="view == 2">
+                            <p class="contentTitle">Are you ok with this domain name?</p>
+
+                            <form class="mainForm">
+                                <div class="row formInnerDiv">
+                                    <div class="input-field col s8">
+                                        <input type="text" value="johndoemed.com" class="validate">
+                                        <p class="unAvailTxt">
+                                            Not satisfied with the suggestions below, type in
+                                            your preferred domain name
+                                        </p>
+                                    </div>
+                                    <div class="col s4">
+                                        <p class="unAvailTitle">Unavailable</p>
+                                    </div>
+
+                                    
+                                </div>
+                            </form>
+
+                            <div class="row">
+                                <div class="col s12 domianMainDiv">
+                                    <p class="primaryTxt">Suggestions</p>
+                            
+                                    <div class="col s1">
+                                        <p class="domainSelectP">
+                                            <label>
+                                                <input class="with-gap" name="domainName" type="radio" />
+                                                <span></span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="col s11">
+                                        <table>
+                                            <!-- Table Head Section if ever needed
+                                            <thead><tr><th></th></tr></thead> -->
+                                            <tbody>
+                                                <tr>
+                                                    <td class="domainTdName">mddoejohn.com</td>
+                                                    <td class="domainTdState">Available</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="col s12 domianMainDiv">
+                                    <div class="col s1">
+                                        <p class="domainSelectP">
+                                            <label>
+                                                <input class="with-gap" name="domainName" type="radio" />
+                                                <span></span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="col s11">
+                                        <table>
+                                            <!-- Table Head Section if ever needed
+                                            <thead><tr><th></th></tr></thead> -->
+                                            <tbody>
+                                                <tr>
+                                                    <td class="domainTdName">johnmddoe.com</td>
+                                                    <td class="domainTdState">Available</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="col s12 domianMainDiv">
+                                    <div class="col s1">
+                                        <p class="domainSelectP">
+                                            <label>
+                                                <input class="with-gap" name="domainName" type="radio" />
+                                                <span></span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="col s11">
+                                        <table>
+                                            <!-- Table Head Section if ever needed
+                                            <thead><tr><th></th></tr></thead> -->
+                                            <tbody>
+                                                <tr>
+                                                    <td class="domainTdName">johndoe.com</td>
+                                                    <td class="domainTdState">Available</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="col s12 domianMainDiv">
+                                    <div class="col s1">
+                                        <p class="domainSelectP">
+                                            <label>
+                                                <input class="with-gap" name="domainName" type="radio" />
+                                                <span></span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="col s11">
+                                        <table>
+                                            <!-- Table Head Section if ever needed
+                                            <thead><tr><th></th></tr></thead> -->
+                                            <tbody>
+                                                <tr>
+                                                    <td class="domainTdName">mdjohn.com</td>
+                                                    <td class="domainTdState">Available</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Client Img check section -->
+                        <div v-show="view == 3">
+                            <p class="contentTitle">Are you ok with this picture?</p>
+                            
+                            <div class="proImgDiv">
+                                <img src="/media/img/setupWeb/profilePics.png" alt="profilePics.png" class="proImg">
+                            </div>
+
+                            <div class="proImgBtnMainDiv">
+                                <div class="proImgBtnContainDiv">
+                                    <a href="#" class="proImgYesBtn" @click="yesProImg()">Yes</a>
+                                    <form>
+                                        <a href="#" class="proImgSelectFile" @click="$refs.file.click()">
+                                            No
+                                            <i class="material-icons proInputFileUpladIcon">file_upload</i>
+                                        </a>
+                                        <input type="file" ref="file" class="displayNone" />
                                     </form>
                                 </div>
-                            </div>
-                            <div class="proImgInstructDiv">
-                                <p class="proImgInstruct">The image should be 451px width and 512px height</p>
+                                <div class="proImgInstructDiv">
+                                    <p class="proImgInstruct">The image should be 451px width and 512px height</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Acadamic Section -->
-                    <div v-show="view == 4">
-                        <!-- Academic Check -->
-                        <div v-show="academicCheck == 0">
+                        <!-- Acadamic Section -->
+                        <div v-show="view == 4">
                             <p class="contentTitle">Which academic path suits you?</p>
                             
                             <div class="acaMainDiv">
@@ -224,146 +222,135 @@
                                 </p>
                             </div>
                         </div>
+
+                        <!-- Undergrad and Med school Acadamic Section -->
+                        <div v-show="view == 5">
+                            <p class="contentTitle">Tell us about your time in undergraduate school</p>
+                    
+                            <form class="mainForm">
+                                <div class="row formContainDiv">
+                                    <div class="input-field col s12">
+                                        <input placeholder="What Institution did you attend" type="text" class="validate formInput">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div v-show="view == 6">
+                            <p class="contentTitle">Tell us about your time in undergraduate school</p>
+                            
+                            <form class="mainForm">
+                                <div class="row formInnerDiv">
+                                    <div class="input-field col s5">
+                                        <input placeholder="What major" type="text" class="validate formInput">
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input placeholder="What minor(optional)" type="text" class="validate formInput">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div v-show="view == 7">
+                            <p class="contentTitle">Tell us about your time in undergraduate school</p>
+                            
+                            <form class="mainForm">
+                                <div class="row formInnerDiv">
+                                    <div class="col s6">
+                                        <p class="schQuesP">When did you start</p>
+                                        <div class="row spaceAround">
+                                            <div class="col s2">
+                                                <p class="schQuesP1">Start</p>
+                                            </div>
+                                            <div class="input-field col s4 formInput1ColDiv">
+                                                <input placeholder="Month" type="text" class="validate formInput1">
+                                            </div>
+                                            <div class="input-field col s4 formInput1ColDiv">
+                                                <input placeholder="Year" type="text" class="validate formInput1">
+                                            </div>
+                                        </div>
+                                    </div>
                         
-
-                        <!-- Undergrad and Med school -->
-                        <div v-show="academicCheck == 1">
-                            <div>
-                                <p class="contentTitle">Tell us about your time in undergraduate school</p>
-
-                                <div v-if="attendedSchInfo == 0">
-                                    <form class="mainForm" > 
-                                        <div class="row formContainDiv">
-                                            <div class="input-field col s12">
-                                                <input placeholder="What Institution did you attend" type="text" class="validate formInput">
+                                    <div class=" col s5">
+                                        <p class="schQuesP">When did you end</p>
+                                        <div class="row spaceAround">
+                                            <div class="col s2">
+                                                <p class="schQuesP1">End</p>
+                                            </div>
+                                            <div class="input-field col s4 formInput1ColDiv">
+                                                <input placeholder="Month" type="text" class="validate formInput1">
+                                            </div>
+                                            <div class="input-field col s4 formInput1ColDiv">
+                                                <input placeholder="Year" type="text" class="validate formInput1">
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
-
-                                <div v-if="attendedSchInfo == 1">
-                                    <form class="mainForm">
-                                        <div class="row formInnerDiv">
-                                            <div class="input-field col s5">
-                                                <input placeholder="What major" type="text" class="validate formInput">
-                                            </div>
-                                            <div class="input-field col s6">
-                                                <input placeholder="What minor(optional)" type="text" class="validate formInput">
-                                            </div>
-                                        </div>
-                                    </form>
+                            </form>
+                        </div>
+                        
+                        <!-- Med school Acadamic Section -->
+                        <div v-show="view == 8">
+                            <p class="contentTitle">Tell us about your time in medical school</p>
+                        
+                            <form class="mainForm">
+                                <div class="row formContainDiv">
+                                    <div class="input-field col s12">
+                                        <input placeholder="What Institution did you attend" type="text" class="validate formInput">
+                                    </div>
                                 </div>
-
-                                <div v-if="attendedSchInfo == 2">
-                                    <form class="mainForm">
-                                        <div class="row formInnerDiv">
-                                            <div class="col s6">
-                                                <p class="schQuesP">When did you start</p>
-                                                <div class="row spaceAround">
-                                                    <div class="col s3">
-                                                        <p class="schQuesP1">Start</p>
-                                                    </div>
-                                                    <div class="input-field col s4 formInput1ColDiv">
-                                                        <input placeholder="Month" type="text" class="validate formInput1">
-                                                    </div>
-                                                    <div class="input-field col s4 formInput1ColDiv">
-                                                        <input placeholder="Year" type="text" class="validate formInput1">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class=" col s5">
-                                                <p class="schQuesP" >When did you end</p>
-                                                <div class="row spaceAround">
-                                                    <div class="col s2">
-                                                        <p class="schQuesP1">End</p>
-                                                    </div>
-                                                    <div class="input-field col s4 formInput1ColDiv">
-                                                        <input placeholder="Month" type="text" class="validate formInput1">
-                                                    </div>
-                                                    <div class="input-field col s4 formInput1ColDiv">
-                                                        <input placeholder="Year" type="text" class="validate formInput1">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            </form>
+                        </div>
+                        <div v-show="view == 9">
+                            <p class="contentTitle">Tell us about your time in medical school</p>
                             
+                            <form class="mainForm">
+                                <div class="row formContainDiv">
+                                    <div class="input-field col s12">
+                                        <input placeholder="What degree" type="text" class="validate formInput">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div v-show="view == 10">
+                            <p class="contentTitle">Tell us about your time in medical school</p>
                             
+                            <form class="mainForm">
+                                <div class="row formInnerDiv">
+                                    <div class="col s6">
+                                        <p class="schQuesP">When did you start</p>
+                                        <div class="row spaceAround">
+                                            <div class="col s2">
+                                                <p class="schQuesP1">Start</p>
+                                            </div>
+                                            <div class="input-field col s4 formInput1ColDiv">
+                                                <input placeholder="Month" type="text" class="validate formInput1">
+                                            </div>
+                                            <div class="input-field col s4 formInput1ColDiv">
+                                                <input placeholder="Year" type="text" class="validate formInput1">
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class=" col s5">
+                                        <p class="schQuesP">When did you end</p>
+                                        <div class="row spaceAround">
+                                            <div class="col s2">
+                                                <p class="schQuesP1">End</p>
+                                            </div>
+                                            <div class="input-field col s4 formInput1ColDiv">
+                                                <input placeholder="Month" type="text" class="validate formInput1">
+                                            </div>
+                                            <div class="input-field col s4 formInput1ColDiv">
+                                                <input placeholder="Year" type="text" class="validate formInput1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
 
-                        <!-- Med school -->
-                        <div v-show="academicCheck == 2">
-                            <!-- <div> -->
-                                <p class="contentTitle">Tell us about your time in medical school</p>
-                            
-                                <div>
-                                    <div v-if="attendedMedSch == 0">
-                                        <form class="mainForm">
-                                            <div class="row formContainDiv">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="What Institution did you attend" type="text" class="validate formInput">
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                            
-                                    <div v-if="attendedMedSch == 1">
-                                        <form class="mainForm">
-                                            <div class="row formContainDiv">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="What degree" type="text" class="validate formInput">
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                            
-                                    <div v-if="attendedMedSch == 2">
-                                        <form class="mainForm">
-                                            <div class="row formInnerDiv">
-                                                <div class="col s6">
-                                                    <p class="schQuesP">When did you start</p>
-                                                    <div class="row spaceAround">
-                                                        <div class="col s3">
-                                                            <p class="schQuesP1">Start</p>
-                                                        </div>
-                                                        <div class="input-field col s4 formInput1ColDiv">
-                                                            <input placeholder="Month" type="text" class="validate formInput1">
-                                                        </div>
-                                                        <div class="input-field col s4 formInput1ColDiv">
-                                                            <input placeholder="Year" type="text" class="validate formInput1">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                            
-                                                <div class=" col s5">
-                                                    <p class="schQuesP">When did you end</p>
-                                                    <div class="row spaceAround">
-                                                        <div class="col s2">
-                                                            <p class="schQuesP1">End</p>
-                                                        </div>
-                                                        <div class="input-field col s4 formInput1ColDiv">
-                                                            <input placeholder="Month" type="text" class="validate formInput1">
-                                                        </div>
-                                                        <div class="input-field col s4 formInput1ColDiv">
-                                                            <input placeholder="Year" type="text" class="validate formInput1">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            <!-- </div> -->
-                        </div>
-                    </div>
-
-                    <!-- Internship Section -->
-                    <div v-show="view == 5">
-                        <!-- Internship Check -->
-                        <div v-show="internshipCheck == 0">
+                        <!-- Internship Section -->
+                        <div v-show="view == 11">
                             <p class="contentTitle">Did you attend internship?</p>
                     
                             <div class="radioBtnMainDiv">
@@ -381,10 +368,9 @@
                                 </p>
                             </div>
                         </div>
-
-                        <div v-show="internshipCheck == 1">
+                        <div v-show="view == 12">
                             <p class="contentTitle">Tell us about your internship program</p>
-
+                        
                             <form class="mainForm">
                                 <div class="row formContainDiv">
                                     <div class="input-field col s12">
@@ -393,8 +379,7 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="internshipCheck == 2">
+                        <div v-show="view == 13">
                             <p class="contentTitle">Tell us about your internship program</p>
                         
                             <form class="mainForm">
@@ -402,7 +387,7 @@
                                     <div class="col s6">
                                         <p class="schQuesP">When did you start</p>
                                         <div class="row spaceAround">
-                                            <div class="col s3">
+                                            <div class="col s2">
                                                 <p class="schQuesP1">Start</p>
                                             </div>
                                             <div class="input-field col s4 formInput1ColDiv">
@@ -413,7 +398,7 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+                        
                                     <div class=" col s5">
                                         <p class="schQuesP">When did you end</p>
                                         <div class="row spaceAround">
@@ -431,14 +416,11 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
 
-                    <!-- Fellowship Section -->
-                    <div v-show="view == 6">
-                        <!-- Fellowship Check -->
-                        <div v-show="fellowshipCheck == 0">
+                        <!-- Fellowship Section -->
+                        <div v-show="view == 14">
                             <p class="contentTitle">Did you attended fellowship?</p>
-                    
+                            
                             <div class="radioBtnMainDiv">
                                 <p>
                                     <label @click="fellowSelected()">
@@ -453,11 +435,11 @@
                                     </label>
                                 </p>
                             </div>
+                            
                         </div>
-                    
-                        <div v-show="fellowshipCheck == 1">
+                        <div v-show="view == 15">
                             <p class="contentTitle">Tell us about your fellowship program</p>
-                    
+                        
                             <form class="mainForm">
                                 <div class="row formContainDiv">
                                     <div class="input-field col s12">
@@ -466,16 +448,15 @@
                                 </div>
                             </form>
                         </div>
-                    
-                        <div v-show="fellowshipCheck == 2">
+                        <div v-show="view == 16">
                             <p class="contentTitle">Tell us about your fellowship program</p>
-                    
+                        
                             <form class="mainForm">
                                 <div class="row formInnerDiv">
                                     <div class="col s6">
                                         <p class="schQuesP">When did you start</p>
                                         <div class="row spaceAround">
-                                            <div class="col s3">
+                                            <div class="col s2">
                                                 <p class="schQuesP1">Start</p>
                                             </div>
                                             <div class="input-field col s4 formInput1ColDiv">
@@ -486,7 +467,7 @@
                                             </div>
                                         </div>
                                     </div>
-                    
+                        
                                     <div class=" col s5">
                                         <p class="schQuesP">When did you end</p>
                                         <div class="row spaceAround">
@@ -504,14 +485,11 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
 
-                    <!-- Residency Section -->
-                    <div v-show="view == 7">
-                        <!-- Residency Check -->
-                        <div v-show="residencyCheck == 0">
+                        <!-- Residency Section -->
+                        <div v-show="view == 17">
                             <p class="contentTitle">Did you attended residency?</p>
-                    
+                            
                             <div class="radioBtnMainDiv">
                                 <p>
                                     <label @click="residencySelected()">
@@ -527,10 +505,9 @@
                                 </p>
                             </div>
                         </div>
-                    
-                        <div v-show="residencyCheck == 1">
+                        <div v-show="view == 18">
                             <p class="contentTitle">Tell us about your residency program</p>
-                    
+                        
                             <form class="mainForm">
                                 <div class="row formContainDiv">
                                     <div class="input-field col s12">
@@ -539,16 +516,15 @@
                                 </div>
                             </form>
                         </div>
-                    
-                        <div v-show="residencyCheck == 2">
+                        <div v-show="view == 19">
                             <p class="contentTitle">Tell us about your residency program</p>
-                    
+                        
                             <form class="mainForm">
                                 <div class="row formInnerDiv">
                                     <div class="col s6">
                                         <p class="schQuesP">When did you start</p>
                                         <div class="row spaceAround">
-                                            <div class="col s3">
+                                            <div class="col s2">
                                                 <p class="schQuesP1">Start</p>
                                             </div>
                                             <div class="input-field col s4 formInput1ColDiv">
@@ -559,7 +535,7 @@
                                             </div>
                                         </div>
                                     </div>
-                    
+                        
                                     <div class=" col s5">
                                         <p class="schQuesP">When did you end</p>
                                         <div class="row spaceAround">
@@ -577,13 +553,11 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
 
-                    <!-- Experience Section -->
-                    <div v-show="view == 8">
-                        <!-- Experience Check -->
-                        <div v-show="experienceCheck == 0">
+                        <!-- Experience Section -->
+                        <div v-show="view == 20">
                             <p class="contentTitle">Tell us about your experience</p>
+
                             <form class="mainForm">
                                 <div class="row formContainDiv">
                                     <div class="input-field col s12">
@@ -592,8 +566,7 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="experienceCheck == 1">
+                        <div v-show="view == 21">
                             <p class="contentTitle">Tell us about your experience</p>
                             <form class="mainForm">
                                 <div class="row formContainDiv">
@@ -603,8 +576,8 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="experienceCheck == 2">
+                        
+                        <div v-show="view == 22">
                             <p class="contentTitle">Tell us about your experience</p>
                             <form class="mainForm">
                                 <div class="row formContainDiv">
@@ -614,15 +587,15 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="experienceCheck == 3">
+                        
+                        <div v-show="view == 23">
                             <p class="contentTitle">Tell us about your experience</p>
                             <form class="mainForm">
                                 <div class="row formInnerDiv">
                                     <div class="col s6">
                                         <p class="schQuesP">When did you start</p>
                                         <div class="row spaceAround">
-                                            <div class="col s3">
+                                            <div class="col s2">
                                                 <p class="schQuesP1">Start</p>
                                             </div>
                                             <div class="input-field col s4 formInput1ColDiv">
@@ -633,7 +606,7 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+                        
                                     <div class=" col s5">
                                         <p class="schQuesP">When did you end</p>
                                         <div class="row spaceAround">
@@ -651,8 +624,8 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="experienceCheck == 4">
+                        
+                        <div v-show="view == 24">
                             <p class="contentTitle">Do you want to add more experience</p>
                             <div class="radioBtnMainDiv">
                                 <p>
@@ -669,12 +642,11 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Add More Quarifications Section -->
-                    <div v-show="view == 9">
-                        <div v-show="addQualificaion == 0">
+                        <!-- Add More Quarifications Section -->
+                        <div v-show="view == 25">
                             <p class="contentTitle">Do you have additional academic qualifications</p>
+                            
                             <div class="radioBtnMainDiv">
                                 <p>
                                     <label @click="addQualSelected()">
@@ -690,10 +662,9 @@
                                 </p>
                             </div>
                         </div>
-
-                        <div v-show="addQualificaion == 1">
+                        <div v-show="view == 26">
                             <p class="contentTitle">Tell us about your academic qualifications</p>
-
+                        
                             <form class="mainForm">
                                 <div class="row formContainDiv">
                                     <div class="input-field col s12">
@@ -702,10 +673,9 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="addQualificaion == 2">
+                        <div v-show="view == 27">
                             <p class="contentTitle">Tell us about your academic qualifications</p>
-
+                        
                             <form class="mainForm">
                                 <div class="row formContainDiv">
                                     <div class="input-field col s12">
@@ -714,8 +684,7 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="addQualificaion == 3">
+                        <div v-show="view == 28">
                             <p class="contentTitle">Tell us about your residency program</p>
                         
                             <form class="mainForm">
@@ -723,7 +692,7 @@
                                     <div class="col s6">
                                         <p class="schQuesP">When did you start</p>
                                         <div class="row spaceAround">
-                                            <div class="col s3">
+                                            <div class="col s2">
                                                 <p class="schQuesP1">Start</p>
                                             </div>
                                             <div class="input-field col s4 formInput1ColDiv">
@@ -734,7 +703,7 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+                        
                                     <div class=" col s5">
                                         <p class="schQuesP">When did you end</p>
                                         <div class="row spaceAround">
@@ -752,8 +721,7 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="addQualificaion == 4">
+                        <div v-show="view == 29">
                             <p class="contentTitle">Do you want to add more additional qualifications</p>
                         
                             <div class="radioBtnMainDiv">
@@ -771,11 +739,9 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Service Section -->
-                    <div v-show="view == 10">
-                        <div v-show="servicesCheck == 0">
+                        <!-- Service Section -->
+                        <div v-show="view == 30">
                             <p class="contentTitle">Do you render any services?</p>
                             
                             <div class="radioBtnMainDiv">
@@ -793,10 +759,9 @@
                                 </p>
                             </div>
                         </div>
-
-                        <div v-show="servicesCheck == 1">
+                        <div v-show="view == 31">
                             <p class="contentTitle">Tell us about your services</p>
-
+                        
                             <form class="mainForm">
                                 <div class="row formContainDiv">
                                     <div class="input-field col s12">
@@ -805,8 +770,7 @@
                                 </div>
                             </form>
                         </div>
-
-                        <div v-show="servicesCheck == 2">
+                        <div v-show="view == 32">
                             <p class="contentTitle">Do you want to add more services?</p>
                         
                             <div class="radioBtnMainDiv">
@@ -824,253 +788,58 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Publish Section -->
-                    <div v-show="view == 11">
-                        <p class="contentTitle">
-                            <span class="serviceSuccessTxt">Congrats!</span>
-                            Curriculum Vitae completed
-                        </p>
+                        <!-- Publish Section -->
+                        <div v-show="view == 33">
+                            <p class="contentTitle">
+                                <span class="serviceSuccessTxt">Congrats!</span>
+                                Curriculum Vitae completed
+                            </p>
 
-                        <div class="row serviceBtnRowDiv">
-                            <div class="col s5 m4 offset-s1 offset-m2">
-                                <button class="waves-effect waves-light btn goLiveFreeBtn">
-                                    Go live <br> Free
-                                </button>
+                            <div class="row serviceBtnRowDiv">
+                                <div class="col s5 m4 offset-s1 offset-m2">
+                                    <button class="waves-effect waves-light btn goLiveFreeBtn">
+                                        Go live <br> Free
+                                    </button>
 
-                                <ul>
-                                    <li>Secured website</li>
-                                    <li>Custom domain name</li>
-                                    <li>Branded email</li>
-                                </ul>
-                            </div>
-                            <div class="col s5 m4 offset-s1 offset-m1">
-                                <button class="waves-effect waves-light btn goLiveProBtn">
-                                    Go live <br> Pro
-                                </button>
+                                    <ul>
+                                        <li>Secured website</li>
+                                        <li>Custom domain name</li>
+                                        <li>Branded email</li>
+                                    </ul>
+                                </div>
+                                <div class="col s5 m4 offset-s1 offset-m1">
+                                    <button class="waves-effect waves-light btn goLiveProBtn">
+                                        Go live <br> Pro
+                                    </button>
 
-                                <ul>
-                                    <li>Secured website</li>
-                                    <li>Custom domain name</li>
-                                    <li>Branded email</li>
-                                    <li>Social media stream</li>
-                                </ul>
+                                    <ul>
+                                        <li>Secured website</li>
+                                        <li>Custom domain name</li>
+                                        <li>Branded email</li>
+                                        <li>Social media stream</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Prev/Next Button Section -->
-                    <div>
-                        <div v-if="view > 0 && view <= 3" class="skipDiv">
+                        <!-- Prev/Next Button Section -->
+                        <div v-if="view > 0" class="skipDiv">
                             <button class="skipBtn" 
                                 @click="prev()" 
-                                :disabled="view <= 1" :class="view > 1 ? 'btnOn' : 'btnOff'"
-                            >
+                                :disabled="view <= 1" 
+                                :class="view > 1 ? 'btnOn' : 'btnOff'">
                                 <i class="material-icons">keyboard_arrow_left</i>
                             </button>
                                 <span class="skipTxt">skip</span>
                             <button class="skipBtn" 
                                 @click="next()" 
                                 :disabled="view == view.length" 
-                                :class="view != 4 ? 'btnOn' : 'btnOff'"
-                            >
+                                :class="view != 33 ? 'btnOn' : 'btnOff'">
                                 <i class="material-icons">keyboard_arrow_right</i>
                             </button>
-                    
-                            <!-- <i class="material-icons skipBtnIcon" @click="prev()">keyboard_arrow_left</i>
-                            <span class="skipTxt">skip</span>
-                            <i class="material-icons skipBtnIcon" @click="next()">keyboard_arrow_right</i> -->
                         </div>
-                        <div v-if="view == 4 && academicCheck == 0">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev10()" 
-                                    :disabled="academicCheck == academicCheck.length"
-                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next10()" 
-                                    :disabled="academicCheck == academicCheck.length"
-                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 4 && academicCheck == 1">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev1()" 
-                                    :disabled="academicCheck == academicCheck.length"
-                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next1()" 
-                                    :disabled="academicCheck == academicCheck.length"
-                                    :class="attendedSchInfo != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 4 && academicCheck == 2 && attendedMedSch <= 3">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev2()" 
-                                    :disabled="academicCheck == academicCheck.length"
-                                    :class="attendedMedSch != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next2()" 
-                                    :disabled="academicCheck == academicCheck.length"
-                                    :class="attendedMedSch != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 5">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev3()" 
-                                    :disabled="internshipCheck == internshipCheck.length"
-                                    :class="internshipCheck != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" @click="next3()" 
-                                    :disabled="internshipCheck == internshipCheck.length"
-                                    :class="internshipCheck != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 6">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev4()" 
-                                    :disabled="fellowshipCheck == fellowshipCheck.length"
-                                    :class="fellowshipCheck != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next4()" 
-                                    :disabled="fellowshipCheck == fellowshipCheck.length"
-                                    :class="fellowshipCheck != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 7">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev5()" 
-                                    :disabled="residencyCheck == residencyCheck.length"
-                                    :class="residencyCheck != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next5()" 
-                                    :disabled="residencyCheck == residencyCheck.length"
-                                    :class="residencyCheck != 3 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 8">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev6()" 
-                                    :disabled="experienceCheck == experienceCheck.length"
-                                    :class="experienceCheck != 5 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next6()" 
-                                    :disabled="experienceCheck == experienceCheck.length"
-                                    :class="experienceCheck != 5 ? 'btnOn' : 'btnOff'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 9">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev7()" 
-                                    :disabled="addQualificaion == addQualificaion.length"
-                                    :class="addQualificaion > 5 ? 'btnOff' : 'btnOn'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next7()" 
-                                    :disabled="addQualificaion == addQualificaion.length"
-                                    :class="addQualificaion > 5 ? 'btnOff' : 'btnOn'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 10">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev8()" 
-                                    :disabled="servicesCheck >= 3"
-                                    :class="servicesCheck >= 3 ? 'btnOff' : 'btnOn'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next8()" 
-                                    :disabled="servicesCheck == 0"
-                                    :class="servicesCheck < 1 ? 'btnOff' : 'btnOn'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div v-if="view == 11">
-                            <div class="skipDiv">
-                                <button class="skipBtn" 
-                                    @click="prev9()" 
-                                    :disabled="view < 10"
-                                    :class="view < 10 ? 'btnOff' : 'btnOn'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                </button>
-                                    <span class="skipTxt">skip</span>
-                                <button class="skipBtn" 
-                                    @click="next9()" 
-                                    :disabled="view == 11"
-                                    :class="view >= 11 ? 'btnOff' : 'btnOn'"
-                                >
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
-                            </div>
-                        </div>
+
                     </div>
 
                     <!-- <InnerFooter /> -->
@@ -1088,228 +857,82 @@ export default {
     data() {
         return {
             view: 0,
-            academicCheck: 0,
-            attendedSchInfo: 0,
-            attendedMedSch: 0,
-
-            internshipCheck: 0,
-            fellowshipCheck: 0,
-            residencyCheck: 0,
-            experienceCheck: 0,
-            addQualificaion: 0,
-            servicesCheck: 0,
-
-            medSchPrevBtnCheck: 0,
+            medSchClicked: 0, 
         };
     },
     mounted() { },
     methods: {
         prev() {
             this.view != 0 ? this.view-- : null;
+
+            if (this.medSchClicked == 1 && this.view < 8) {
+                this.view = 4;
+            }
         },
         next() {
-            this.view != 4 ? this.view++ : null;
+            this.view != 33 ? this.view++ : null;
         },
         getStarted() {
             this.view = 1;
         },
         undergradMedSelected() {
-            this.academicCheck = 1;
-            this.attendedSchInfo = 0;
+            this.view = 5;
+            this.medSchClicked = 0;
         },
         medSelected() {
-            this.academicCheck = 2;
-            this.attendedMedSch = 0;
-        },
-        prev1() {
-            this.attendedSchInfo != 0 ? this.attendedSchInfo-- : null;
-
-            // if (this.attendedSchInfo < 1) {
-            //     this.view = 4;
-            //     this.academicCheck = 1;
-            //     this.attendedSchInfo = 0;
-            // }
-        },
-        next1() {
-            this.attendedSchInfo != 3 ? this.attendedSchInfo++ : null;
-            
-            if (this.attendedSchInfo >= 3) {
-                this.academicCheck = 2;
-                this.attendedMedSch = 0;
-            }
-        },
-        prev2() {
-            this.attendedMedSch != 0 ? this.attendedMedSch-- : null;
-
-            // if (this.attendedMedSch < 1 && this.medSchPrevBtnCheck == 0) {
-            //     this.academicCheck--;
-            //     this.academicCheck--;
-            // } else {
-            //     this.academicCheck--;
-            //     this.attendedSchInfo = 2;
-            // }
-
-            // this.medSchPrevBtnCheck = 0;
-        },
-        next2() {
-            this.attendedMedSch != 3 ? this.attendedMedSch++ : null;
-
-            if (this.attendedMedSch >= 3) {
-                this.view = 5;
-            }
+            this.view = 8;
+            this.medSchClicked = 1;
         },
         internSelected() {
-            this.internshipCheck = 1;
+            this.view = 12;
         },
         internNotSelected() {
-            this.view = 6;
-        },
-        prev3() {
-            this.internshipCheck != 0 ? this.internshipCheck-- : null;
-
-            if (this.internshipCheck < 1) {
-                this.view = 4;
-                this.academicCheck = 0;
-                this.attendedSchInfo = 0;
-            }
-        },
-        next3() {
-            this.internshipCheck != 3 ? this.internshipCheck++ : null;
-
-            if (this.internshipCheck >= 3) {
-                this.view = 6;
-            }
-        },
-        prev4() {
-            this.fellowshipCheck != 0 ? this.fellowshipCheck-- : null;
-
-            if (this.fellowshipCheck < 2) {
-                this.view = 5;
-                this.internshipCheck = 2;
-            }
-        },
-        next4() {
-            this.fellowshipCheck != 3 ? this.fellowshipCheck++ : null;
-
-            if (this.fellowshipCheck >= 3) {
-                this.view = 7;
-            }
+            this.view = 14;
         },
         fellowSelected() {
-            this.fellowshipCheck = 1;
+            this.view = 15;
         },
         fellowNotSelected() {
-            this.view = 7;
+            this.view = 17;
         },
         residencySelected() {
-            this.residencyCheck = 1;
+            this.view = 18;
         },
         residencyNotSelected() {
-            this.view = 8;
-        },
-        prev5() {
-            this.residencyCheck != 0 ? this.residencyCheck-- : null;
-
-            if (this.residencyCheck < 2) {
-                this.view = 6;
-                this.fellowshipCheck = 2;
-            }
-        }, 
-        next5() {
-            this.residencyCheck != 3 ? this.residencyCheck++ : null;
-
-            if (this.residencyCheck >= 3) {
-                this.view = 8;
-            }
-        },
-        prev6() {
-            this.experienceCheck != 0 ? this.experienceCheck-- : null;
-
-            if (this.experienceCheck == 0) {
-                this.view = 7;
-                this.residencyCheck = 2;
-            }
-        },
-        next6() {
-            this.experienceCheck != 5 ? this.experienceCheck++ : null;
-
-            if (this.experienceCheck >= 5) {
-                this.view = 9;
-            } 
+            this.view = 20;
         },
         expSelected() {
-            this.experienceCheck = 0;
+            this.view = 21;
         }, 
         expNotSelected() {
-            this.view = 9;
-        },
-        prev7() {
-            this.addQualificaion != 0 ? this.addQualificaion-- : null;
-
-            if (this.addQualificaion == 0) {
-                this.view = 8;
-                this.experienceCheck = 4;
-            }
-        },
-        next7() {
-            this.addQualificaion != 5 ? this.addQualificaion++ : null;
-
-            if (this.addQualificaion >= 5) {
-                this.view = 10;
-            }
+            this.view = 25;
         },
         addQualSelected() {
-            this.addQualificaion = 1;
+            this.view = 26;
         },
         addQualNotSelected() {
-            this.view = 10;
+            this.view = 30;
         }, 
         addMoreQualSelected() {
-            this.addQualificaion = 1;
+            this.view = 26;
         },
         addMoreQualNotSelected() {
-            this.view = 10;
-        },
-        prev8() {
-            this.servicesCheck != 0 ? this.servicesCheck-- : null;
-
-            if (this.servicesCheck < 2) {
-                this.view = 9;
-                this.addQualificaion = 4;
-            }
-        },
-        next8() {
-            this.servicesCheck != 3 ? this.servicesCheck++ : null;
-
-            if (this.servicesCheck >= 3) {
-                this.view = 11;
-            }
-        },
-        addMoreServicesSelected() {
-            this.servicesCheck = 1;
-        }, 
-        addMoreServicesNotSelected() {
-            this.view = 11;
+            this.view = 30;
         },
         servicesSelected() {
-            this.servicesCheck = 1;
+            this.view = 31;
         },
         servicesNotSelected() {
-            this.view = 11;
+            this.view = 33;
         },
-        prev9() {
-            this.servicesCheck != 0 ? this.servicesCheck-- : null;
-
-            if (this.servicesCheck < 3) {
-                this.view = 10;
-                this.servicesCheck = 0;
-            }
+        addMoreServicesSelected() {
+            this.view = 31;
+        }, 
+        addMoreServicesNotSelected() {
+            this.view = 33;
         },
-        prev10() {
-            this.view = 3;
-        },
-        next10() {
-            this.academicCheck = 1;
+        yesProImg() {
+            this.view = 4;
         }
     },
 };
@@ -1325,5 +948,8 @@ export default {
     .btnOff {
         border: 2px solid #D9D9D9;
         color: #D9D9D9;
+    }
+    .displayNone {
+        display: none;
     }
 </style>
