@@ -123,7 +123,7 @@
         components: { },
         data() {
             return {
-                view: 1,
+                view: 0,
             };
         },
         mounted() { },
