@@ -868,6 +868,9 @@ export default {
             if (this.medSchClicked == 1 && this.view < 8) {
                 this.view = 4;
             }
+            if (this.medSchClicked == 1 && this.view == 4) {
+                this.medSchClicked = 0;
+            }
         },
         next() {
             this.view != 33 ? this.view++ : null;
