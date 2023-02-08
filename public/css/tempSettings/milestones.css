@@ -89,10 +89,6 @@
     margin: 0;
 }
 
-.primaryColorDocsImg {
-    height: 22.5vh;
-}
-
 .contentTitle {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -298,11 +294,13 @@ a.proImgSelectFile {
         text-align: right;
         text-transform: uppercase;
         color: var(--white);
-        width: 80%;
+        width: 60%;
         margin: 0;
     }
     .primaryColorDocsImg {
         height: 22.5vh;
+        position: absolute;
+        top: 13vh;
     }
     .contentTitle {
         font-family: 'Poppins', sans-serif;

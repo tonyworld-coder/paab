@@ -5,133 +5,140 @@
                 <div class="primaryColorDiv">
                     <div class="headerDiv">
                         <a href="/">
-                            <img src="/media/img/setupWeb/wcdMobileLogo.png" alt="wcdMobileLogo.png">
+                            <img src="/media/img/setupWeb/wcdMobileLogo.png" alt="wcdMobileLogo.png" class="hide-on-large-only wcdMobileLogo">
+                            <img src="/media/img/setupWeb/wcdMobileLogoLarge.png" alt="wcdMobileLogoLarge.png" class="hide-on-med-and-down">
                         </a>
                         <p class="headerTitle">
                             It is time for the world
                             to hear your pulse
                         </p>
                     </div>
-                    <div>
+                    <div class="hide-on-large-only">
                         <img src="/media/img/setupWeb/3dDoctors.png" alt="3dDoctors.png" class="primaryColorDocsImg">
+                    </div>
+                    <div class="hide-on-med-and-down">
+                        <img src="/media/img/setupWeb/3dDoctorsLarge.png" alt="3dDoctorsLarge.png" class="primaryColorDocsImgLarge">
                     </div>
                 </div>
             </div>
 
             <div class="col s12">
                 <div class="contentDiv">
-                    <div v-show="view == 0">
-                        <p class="contentTitle">
-                            Have you featured in a public event?
-                        </p>
-                        
-                        <form class="formContain">
-                            <div class="row">
-                                <div class="col s7 offset-s4">
-                                    <label class="radioBtnLabel">
-                                        <input class="with-gap" name="group1" type="radio" />
-                                        <span class="radioBtnSpan" @click="yesPubEvent()">Yes</span>
-                                    </label>
-                                    <label @click="noPubEvent()">
-                                        <input class="with-gap" name="group1" type="radio" />
-                                        <span class="radioBtnSpan">No</span>
-                                    </label>
+                    <div class="contentInnerDiv">
+                        <div v-show="view == 0">
+                            <p class="contentTitle">
+                                Have you featured in a public event?
+                            </p>
+                            
+                            <form class="formContain1">
+                                <div class="row">
+                                    <div class="col s7 offset-s4">
+                                        <label class="radioBtnLabel">
+                                            <input class="with-gap" name="group1" type="radio" />
+                                            <span class="radioBtnSpan" @click="yesPubEvent()">Yes</span>
+                                        </label>
+                                        <br class="hide-on-med-and-down">
+                                        <label @click="noPubEvent()">
+                                            <input class="with-gap" name="group1" type="radio" />
+                                            <span class="radioBtnSpan">No</span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
+                            </form>
+                        </div>
 
-                    <div v-show="view == 1">
-                        <p class="contentTitle">Who is the organizer?</p>
-                        
-                        <form class="formContain">
-                            <div class="row">
-                                <div class="input-field col s10 offset-s1">
-                                    <input type="text" placeholder="CNN,BBC etc." class="validate">
+                        <div v-show="view == 1">
+                            <p class="contentTitle">Who is the organizer?</p>
+                            
+                            <form class="formContain">
+                                <div class="row">
+                                    <div class="input-field col s10 offset-s1">
+                                        <input type="text" placeholder="CNN,BBC etc." class="validate">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
+                            </form>
+                        </div>
 
-                    <div v-show="view == 2">
-                        <p class="contentTitle">What is the title of the program?</p>
-                        
-                        <form class="formContain">
-                            <div class="row">
-                                <div class="input-field col s10 offset-s1">
-                                    <input type="text" placeholder="Title of the program" class="validate">
+                        <div v-show="view == 2">
+                            <p class="contentTitle">What is the title of the program?</p>
+                            
+                            <form class="formContain">
+                                <div class="row">
+                                    <div class="input-field col s10 offset-s1">
+                                        <input type="text" placeholder="Title of the program" class="validate">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
+                            </form>
+                        </div>
 
-                    <div v-show="view == 3">
-                        <p class="contentTitle">Is there a URL to this program?</p>
-                        
-                        <form class="formContain">
-                            <div class="row">
-                                <div class="input-field col s10 offset-s1">
-                                    <input type="text" placeholder="Input the URL" class="validate">
+                        <div v-show="view == 3">
+                            <p class="contentTitle">Is there a URL to this program?</p>
+                            
+                            <form class="formContain">
+                                <div class="row">
+                                    <div class="input-field col s10 offset-s1">
+                                        <input type="text" placeholder="Input the URL" class="validate">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
+                            </form>
+                        </div>
 
-                    <div v-show="view == 4">
-                        <p class="contentTitle">
-                            Do you want to add more
-                        </p>
-                        
-                        <form class="formContain">
-                            <div class="row">
-                                <div class="col s7 offset-s4">
-                                    <label class="radioBtnLabel">
-                                        <input class="with-gap" name="group1" type="radio" />
-                                        <span class="radioBtnSpan" @click="addMore()">Yes</span>
-                                    </label>
-                                    <label @click="dontAddMore()">
-                                        <input class="with-gap" name="group1" type="radio" />
-                                        <span class="radioBtnSpan">No</span>
-                                    </label>
+                        <div v-show="view == 4">
+                            <p class="contentTitle">
+                                Do you want to add more
+                            </p>
+                            
+                            <form class="formContain1">
+                                <div class="row">
+                                    <div class="col s7 offset-s4">
+                                        <label class="radioBtnLabel">
+                                            <input class="with-gap" name="group1" type="radio" />
+                                            <span class="radioBtnSpan" @click="addMore()">Yes</span>
+                                        </label>
+                                        <br class="hide-on-med-and-down">
+                                        <label @click="dontAddMore()">
+                                            <input class="with-gap" name="group1" type="radio" />
+                                            <span class="radioBtnSpan">No</span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
+                            </form>
+                        </div>
 
-                    <div v-show="view == 5">
-                        <p class="contentTitle">
-                            <span class="milestoneCongratMsg">Congratulations!!!</span>
-                            <br>
-                            you have setup the public feature section of your website.
-                            please click the link to preview on your website
-                        </p>
-                        
-                        <div class="viewWebBtnDiv">
-                            <a href="/preview/1" class="btn viewWebBtn">
-                                View website
-                            </a>
+                        <div v-show="view == 5">
+                            <p class="contentTitle">
+                                <span class="milestoneCongratMsg">Congratulations!!!</span>
+                                <br>
+                                you have setup the public feature section of your website.
+                                please click the link to preview on your website
+                            </p>
+                            
+                            <div class="viewWebBtnDiv">
+                                <a href="/preview/1" class="btn viewWebBtn">
+                                    View website
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Prev/Next Button Section -->
+                        <div v-if="view != 4 && view != 5" class="skipDiv">
+                            <button 
+                                class="skipBtn" 
+                                @click="prev()" :disabled="view < 1"
+                                :class="view > 0 ? 'btnOn' : 'btnOff'"
+                            >
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </button>
+                                <span class="skipTxt">skip</span>
+                            <button 
+                                class="skipBtn" @click="next()" 
+                                :disabled="view == view.length"
+                                :class="view != 5 ? 'btnOn' : 'btnOff'"
+                            >
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </button>
                         </div>
                     </div>
-
-                    <!-- Prev/Next Button Section -->
-                    <div v-if="view != 4 && view != 5" class="skipDiv">
-                        <button 
-                            class="skipBtn" 
-                            @click="prev()" :disabled="view < 1"
-                            :class="view > 0 ? 'btnOn' : 'btnOff'"
-                        >
-                            <i class="material-icons">keyboard_arrow_left</i>
-                        </button>
-                            <span class="skipTxt">skip</span>
-                        <button 
-                            class="skipBtn" @click="next()" 
-                            :disabled="view == view.length"
-                            :class="view != 5 ? 'btnOn' : 'btnOff'"
-                        >
-                            <i class="material-icons">keyboard_arrow_right</i>
-                        </button>
-                    </div>
-
                 </div>
             </div>
         </div>
