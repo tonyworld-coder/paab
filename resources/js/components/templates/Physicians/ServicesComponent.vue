@@ -14,7 +14,7 @@
 
                             <div>
                                 <!-- Services Modal Trigger -->
-                                <a class="modal-trigger servicesEditBtn" href="#servicesEditModal">
+                                <a class="modal-trigger servicesEditBtn" href="#servicesEditModal" title="Edit Services">
                                     <i class="material-icons editIcon">edit</i>
                                 </a>
                                 

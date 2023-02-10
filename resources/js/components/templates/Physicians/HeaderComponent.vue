@@ -27,20 +27,16 @@
                         >
                     </li>
                     <li>
-                        <!-- Settings Dropdown Trigger -->
-                        <a class='dropdown-trigger physiTempSettingsNavLink' 
-                            href='#' data-target='dropSettings'
-                        >
-                            Settings
-                            <i class="material-icons physiTempSettingsIcon">settings</i>
-                        </a>
-                    </li>
-                    <li>
                         <a href="#contact" class="physiTempContactBtn"
                             >Contact Me
                             </a>
                     </li>
-                    
+                    <li>
+                        <!-- Settings Dropdown Trigger -->
+                        <a class='dropdown-trigger physiTempSettingsNavLink' href='#' data-target='dropSettings'>
+                            <i class="material-icons physiTempSettingsIcon">settings</i>
+                        </a>
+                    </li>
                 </ul>
 
                 <!-- Settings Dropdown Structure -->

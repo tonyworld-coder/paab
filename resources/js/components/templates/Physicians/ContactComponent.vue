@@ -11,7 +11,7 @@
 
                 <div>
                     <!-- Contact Modal Trigger -->
-                    <a class="modal-trigger contactEditBtn" href="#contactEditModal">
+                    <a class="modal-trigger contactEditBtn" href="#contactEditModal" title="Edit Contact">
                         <i class="material-icons editIcon">edit</i>
                     </a>
                     

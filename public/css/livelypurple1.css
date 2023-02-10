@@ -786,7 +786,7 @@ a.modal-trigger.aboutWriteUpsEditBtn {
     border-radius: 50px;
     position: absolute;
     top: 45vh;
-    left: 29vw;
+    right: 3vw;
 }
 a.modal-trigger.aboutImgEditBtn {
     width: 2.5vw;
@@ -794,8 +794,8 @@ a.modal-trigger.aboutImgEditBtn {
     background-color: #edebeb;
     border-radius: 50px;
     position: absolute;
-    top: 35vh;
-    right: 11vw;
+    top: 28vh;
+    right: 3vw;
 }
 i.material-icons.editIcon {
     color: #554c8a;
@@ -814,7 +814,7 @@ a.modal-trigger.servicesEditBtn {
     border-radius: 50px;
     position: absolute;
     top: -3vh;
-    right: 35vw;
+    right: -4vw;
 }
 #testiContactFormTitleDiv {
     position: relative;
@@ -826,7 +826,7 @@ a.modal-trigger.contactEditBtn {
     border-radius: 50px;
     position: absolute;
     top: 6vh;
-    right: 35vw;
+    right: 3vw;
 }
 
 /* About Me Writeup edit modal */
@@ -936,22 +936,20 @@ p.servicesInputInstruct {
 }
 
 a.physiTempSettingsNavLink {
-    display: flex;
-    font-family: "Montserrat", sans-serif;
-    color: var(--black);
-    position: relative;
-    top: 0.9vh;
+    background-color: transparent;
 }
 a.physiTempSettingsNavLink:hover {
-    background-color: white;
-    border-bottom: 4px solid rgba(113, 96, 187, 0.5);
-    padding: 0;
-    border-left: none;
-    margin: 0 0.96vw;
+    background-color: transparent;
 }
 i.material-icons.physiTempSettingsIcon {
     position: relative;
-    bottom: 2.6vh;
+    bottom: 2vh;
+    left: 3vw;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+i.material-icons.physiTempSettingsIcon:hover {
+    color: var(--black);
 }
 #dropSettings {
     min-width: 12vw;

@@ -42,7 +42,7 @@
 
                                     <div>
                                         <!-- About WriteUp Modal Trigger -->
-                                        <a class="modal-trigger aboutWriteUpsEditBtn" href="#aboutWriteUpsEditModal">
+                                        <a class="modal-trigger aboutWriteUpsEditBtn" href="#aboutWriteUpsEditModal" title="Edit Name and Description">
                                             <i class="material-icons editIcon">edit</i>
                                         </a>
                                         
@@ -98,7 +98,7 @@
 
                             <div>
                                 <!-- About Edit Img Modal Trigger -->
-                                <a class="modal-trigger aboutImgEditBtn" href="#aboutImgEditModal">
+                                <a class="modal-trigger aboutImgEditBtn" href="#aboutImgEditModal" title="Edit Image">
                                     <i class="material-icons editIcon">edit</i>
                                 </a>
                                 
