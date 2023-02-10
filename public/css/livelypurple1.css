@@ -785,8 +785,8 @@ a.modal-trigger.aboutWriteUpsEditBtn {
     background-color: #edebeb;
     border-radius: 50px;
     position: absolute;
-    top: 45vh;
-    right: 3vw;
+    top: 50vh;
+    left: 46vw;
 }
 a.modal-trigger.aboutImgEditBtn {
     width: 2.5vw;
@@ -794,8 +794,8 @@ a.modal-trigger.aboutImgEditBtn {
     background-color: #edebeb;
     border-radius: 50px;
     position: absolute;
-    top: 28vh;
-    right: 3vw;
+    top: 35vh;
+    right: 11vw;
 }
 i.material-icons.editIcon {
     color: #554c8a;
@@ -813,8 +813,8 @@ a.modal-trigger.servicesEditBtn {
     background-color: #edebeb;
     border-radius: 50px;
     position: absolute;
-    top: -3vh;
-    right: -4vw;
+    top: 13vh;
+    right: 5vw;
 }
 #testiContactFormTitleDiv {
     position: relative;
@@ -825,8 +825,8 @@ a.modal-trigger.contactEditBtn {
     background-color: #edebeb;
     border-radius: 50px;
     position: absolute;
-    top: 6vh;
-    right: 3vw;
+    top: 13vh;
+    right: 21vw;
 }
 
 /* About Me Writeup edit modal */
