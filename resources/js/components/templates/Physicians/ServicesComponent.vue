@@ -12,7 +12,7 @@
                                 <span class="primaryColorBoxDesign1"></span>
                             </h3>
 
-                            <div class="hide-on-large-only">
+                            <div>
                                 <!-- Services Modal Trigger -->
                                 <a class="modal-trigger servicesEditBtn" href="#servicesEditModal">
                                     <i class="material-icons editIcon">edit</i>

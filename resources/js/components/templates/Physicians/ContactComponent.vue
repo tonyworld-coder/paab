@@ -9,7 +9,7 @@
                     <span class="primaryColorBoxDesign5"></span>
                 </h3>
 
-                <div class="hide-on-large-only">
+                <div>
                     <!-- Contact Modal Trigger -->
                     <a class="modal-trigger contactEditBtn" href="#contactEditModal">
                         <i class="material-icons editIcon">edit</i>

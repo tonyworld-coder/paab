@@ -40,7 +40,7 @@
                                         </a>
                                     </p>
 
-                                    <div class="hide-on-large-only">
+                                    <div>
                                         <!-- About WriteUp Modal Trigger -->
                                         <a class="modal-trigger aboutWriteUpsEditBtn" href="#aboutWriteUpsEditModal">
                                             <i class="material-icons editIcon">edit</i>
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
 
-                            <div class="hide-on-large-only">
+                            <div>
                                 <!-- About Edit Img Modal Trigger -->
                                 <a class="modal-trigger aboutImgEditBtn" href="#aboutImgEditModal">
                                     <i class="material-icons editIcon">edit</i>

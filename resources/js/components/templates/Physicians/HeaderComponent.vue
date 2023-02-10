@@ -27,9 +27,50 @@
                         >
                     </li>
                     <li>
-                        <a href="#contact" class="physiTempContactBtn"
-                            >Contact Me</a
+                        <!-- Settings Dropdown Trigger -->
+                        <a class='dropdown-trigger physiTempSettingsNavLink' 
+                            href='#' data-target='dropSettings'
                         >
+                            Settings
+                            <i class="material-icons physiTempSettingsIcon">settings</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="physiTempContactBtn"
+                            >Contact Me
+                            </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- Settings Dropdown Structure -->
+                <ul id='dropSettings' class='dropdown-content'>
+                    <li>
+                        <a href="/general" class="dropSetLink">General</a>
+                    </li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li>
+                        <a href="/bio" class="dropSetLink">Bio</a>
+                    </li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li>
+                        <a href="/milestones" class="dropSetLink">Milestones</a>
+                    </li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li>
+                        <a href="/publicFeature" class="dropSetLink">Public Features</a>
+                    </li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li>
+                        <a href="#!" class="dropSetLink">Services</a>
+                    </li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li>
+                        <a href="/socialmedia" class="dropSetLink">Social Media</a>
+                    </li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li>
+                        <a href="#!" class="dropSetLink">CV Generator</a>
                     </li>
                 </ul>
             </div>

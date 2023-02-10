@@ -764,7 +764,6 @@ a.physiTempContactBtn.active {
     margin-top: 5vh;
 }
 
-/* ************************************************************************************** */
 .rm_mg {
     margin: 0;
 }
@@ -777,6 +776,201 @@ a.physiTempContactBtn.active {
     text-align: center;
     margin: 0 0 1vh 0;
 }
+
+/* ************************************************************************************* */
+/* Template Edit Modal buttons */
+a.modal-trigger.aboutWriteUpsEditBtn {
+    width: 2.5vw;
+    height: 5vh;
+    background-color: #edebeb;
+    border-radius: 50px;
+    position: absolute;
+    top: 45vh;
+    left: 29vw;
+}
+a.modal-trigger.aboutImgEditBtn {
+    width: 2.5vw;
+    height: 5vh;
+    background-color: #edebeb;
+    border-radius: 50px;
+    position: absolute;
+    top: 35vh;
+    right: 11vw;
+}
+i.material-icons.editIcon {
+    color: #554c8a;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+.whatIdoTxtRowDiv {
+    position: relative;
+}
+a.modal-trigger.servicesEditBtn {
+    width: 2.5vw;
+    height: 5vh;
+    background-color: #edebeb;
+    border-radius: 50px;
+    position: absolute;
+    top: -3vh;
+    right: 35vw;
+}
+#testiContactFormTitleDiv {
+    position: relative;
+}
+a.modal-trigger.contactEditBtn {
+    width: 2.5vw;
+    height: 5vh;
+    background-color: #edebeb;
+    border-radius: 50px;
+    position: absolute;
+    top: 6vh;
+    right: 35vw;
+}
+
+/* About Me Writeup edit modal */
+div.aboutWriteUpsEditModalInnerDiv {
+    width: 80%;
+    margin: auto;
+    padding: 1vh 0 5vh 0;
+}
+a.modal-close.editWriteUpsModalCloseBtn {
+    margin-left: -3vw;
+    color: var(--black);
+    text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+}
+input.validate.aboutWriteUpsInput {
+    text-align: start;
+    height: 2vh;
+    border-bottom-color: var(--primary);
+}
+textarea.materialize-textarea.aboutWriteUpsInput {
+    text-align: start;
+    border: 1px solid var(--primary);
+    padding: 0.5vh 0.5vw 2.5vh 0.5vw;
+}
+p.aboutWriteUpsSize {
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+}
+a.editWriteUpsSaveBtn {
+    background-color: #524988;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.3vh 2vw;
+}
+div.editWriteUpsSaveBtnDiv {
+    margin-top: 0vh;
+}
+
+/* About Me Img edit modal*/
+div.aboutImgModalDiv {
+    width: 37%;
+    height: 39vh;
+    margin: 2.5vh auto 0 auto;
+}
+img.aboutImgModal {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+}
+a.editImgChangeBtn {
+    background-color: #524988;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.3vh 2vw;
+}
+div.editImgChangeBtnDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.8vh;
+}
+p.aboutImgSize {
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1.8vh;
+}
+a.modal-close.editImgModalCloseBtn {
+    margin-left: 5vw;
+    color: var(--black);
+    text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+}
+div.aboutImgEditModalInnerDiv {
+    padding: 1vh 0 5vh 0;
+}
+
+/* Service edit modal */
+.whatIdoTxtRowDiv {
+    position: relative;
+}
+textarea.materialize-textarea.servicesTextarea {
+    text-align: start;
+    border: 1px solid var(--primary);
+    padding: 0.5vh 1.5vw;
+    min-height: 17vh;
+}
+a.servicesAddMoreBtn {
+    color: var(--black);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 2vh;
+}
+
+/* Contact Me Edit Btn */
+p.servicesInputInstruct {
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+    text-align: right;
+}
+
+a.physiTempSettingsNavLink {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    color: var(--black);
+    position: relative;
+    top: 0.9vh;
+}
+a.physiTempSettingsNavLink:hover {
+    background-color: white;
+    border-bottom: 4px solid rgba(113, 96, 187, 0.5);
+    padding: 0;
+    border-left: none;
+    margin: 0 0.96vw;
+}
+i.material-icons.physiTempSettingsIcon {
+    position: relative;
+    bottom: 2.6vh;
+}
+#dropSettings {
+    min-width: 12vw;
+}
+.dropdown-content li>a.dropSetLink {
+    font-size: 1.1rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary);
+}   
+.dropdown-content li>a.dropSetLink:hover {
+    background-color: transparent;
+    border-left: none;
+}
+.dropdown-content li:hover {
+    border-left: 1px solid var(--primary);
+}
+
+
+/* ************************************************************************************* */
 
 @media screen and (max-width: 992px) and (min-width: 640px) {
     #testiMapImg {
@@ -972,12 +1166,9 @@ a.physiTempContactBtn.active {
     #feeds {
         background-color: unset;
     }
-
     .feeds {
         background-color: var(--primary);
     }
-
-    /* ************************************************************************************ */
     nav.headerNoSideNav {
         display: block;
         /* margin-bottom: 1vh; */
@@ -1015,7 +1206,6 @@ a.physiTempContactBtn.active {
     }
 
     /* About Me Img edit modal*/
-    /* ********************************************** */
     a.modal-trigger.aboutImgEditBtn {
         width: 4.5vw;
         height: 5vh;
@@ -1043,7 +1233,6 @@ a.physiTempContactBtn.active {
         height: 100%;
         box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
     }
-    /* ************************************************** */
     a.editImgChangeBtn {
         background-color: #524988;
         color: var(--white);
@@ -1073,7 +1262,6 @@ a.physiTempContactBtn.active {
     }
 
     /* About Me Writeup edit modal */
-    /* *********************************************** */
     a.modal-trigger.aboutWriteUpsEditBtn {
         width: 4.5vw;
         height: 5vh;
@@ -1083,7 +1271,6 @@ a.physiTempContactBtn.active {
         top: 20vh;
         left: 40vw;
     }
-    /* *********************************************** */
     a.modal-close.editWriteUpsModalCloseBtn {
         margin-left: -3vw;
         color: var(--black);
@@ -1125,7 +1312,6 @@ a.physiTempContactBtn.active {
     .whatIdoTxtRowDiv {
         position: relative;
     }
-    /* ************************************************ */
     a.modal-trigger.servicesEditBtn {
         width: 4.5vw;
         height: 5vh;
@@ -1135,7 +1321,6 @@ a.physiTempContactBtn.active {
         top: -3vh;
         right: 30vw;
     }
-    /* ************************************************ */
     textarea.materialize-textarea.servicesTextarea {
         text-align: start;
         border: 1px solid var(--primary);
@@ -1157,7 +1342,6 @@ a.physiTempContactBtn.active {
     #testiContactFormTitleDiv {
         position: relative;
     }
-    /* ************************************************ */
     a.modal-trigger.contactEditBtn {
         width: 4.5vw;
         height: 5vh;
@@ -1175,9 +1359,7 @@ a.physiTempContactBtn.active {
         color: var(--primary);
         text-align: center;
         margin: 0 0 1vh 0;
-    }
-    /* ************************************************ */
-    
+    }    
     p.servicesInputInstruct {
         font-size: 0.7rem;
         font-family: 'Poppins', sans-serif;
@@ -1187,7 +1369,6 @@ a.physiTempContactBtn.active {
     a.sidenav-close.sidenavCloseBtn {
         margin: 2vh 0 4vh 0;
     }
-
     i.material-icons.sidenavCloseIcon {
         font-size: 3rem;
     }
@@ -1463,9 +1644,6 @@ a.physiTempContactBtn.active {
     .testimonialRw::-webkit-scrollbar {
         height: 0.5vh;
     }
-
-
-    /* ************************************************************************************ */
     ul.extHeaderNoSideNav {
         display: flex;
         background-color: #F6F3F3;
@@ -1530,7 +1708,6 @@ a.physiTempContactBtn.active {
         display: flex;
         justify-content: center;
     }
-    /* ************************************************* */
     div.aboutImgModalDiv {
         width: 55%;
         height: 25vh;
@@ -1541,7 +1718,6 @@ a.physiTempContactBtn.active {
         height: 100%;
         box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
     }
-    /* ************************************************* */
     a.editImgChangeBtn {
         background-color: #524988;
         color: var(--white);
